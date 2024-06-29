@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "eb52312afdcee7f8",
+    "type": "split",
+    "children": [
+      {
+        "id": "e28129de8b58a792",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ffd9b52c90becf12",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "03 - SCHOOL/task.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false,
+                    false,
+                    true
+                  ]
+                }
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "b4a4b7dd40dc82cb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01 - PROJECTS/rag/tips.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "63474b312acfcb15",
+    "type": "split",
+    "children": [
+      {
+        "id": "24b02d0d69b6470c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2e93acbdfd4833f8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c4b15174cc97489f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 237.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "4bd96c6804f52835",
+    "type": "split",
+    "children": [
+      {
+        "id": "3be9806320b237bf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "75693c5fde478eb3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "01 - PROJECTS/rag/tips.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "106a1c9bf49197e4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "08688faab9f8d7b0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "01 - PROJECTS/rag/tips.md"
+              }
+            }
+          },
+          {
+            "id": "9c74fd397c6c81d2",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "01 - PROJECTS/rag/tips.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 354.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:Open graph view": false,
+      "switcher:Open quick switcher": true,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": true,
+      "command-palette:Open command palette": true,
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-advanced-slides:Show Slide Preview": false,
+      "obsidian-kanban:Create new board": false
+    }
+  },
+  "active": "2e93acbdfd4833f8",
+  "lastOpenFiles": [
+    "03 - SCHOOL/task.md",
+    "task.md",
+    "04 - SETUP/homelab.md",
+    "04 - SETUP/crazy_idea.excalidraw",
+    "04 - SETUP/os.md",
+    "04 - SETUP/wsl.md",
+    "01 - PROJECTS/mux/ideas.canvas",
+    "01 - PROJECTS/mux/architecture.md",
+    "02 - KNOWLEDGE/ssh.md",
+    "02 - KNOWLEDGE/to-download.md",
+    "02 - KNOWLEDGE/webdev/tailwind.md",
+    "02 - KNOWLEDGE/webdev/typescript/jest.md",
+    "02 - KNOWLEDGE/webdev/typescript/more-strictness.md",
+    "02 - KNOWLEDGE/webdev/frontend/Tailwind CSS.md",
+    "02 - KNOWLEDGE/webdev/javascript/Untitled.md",
+    "02 - KNOWLEDGE/webdev/next/next-auth-canvas.md",
+    "02 - KNOWLEDGE/webdev/next/next-auth-canvas.excalidraw",
+    "02 - KNOWLEDGE/webdev/next/next-auth.md",
+    "02 - KNOWLEDGE/ai/parcial.md",
+    "02 - KNOWLEDGE/db/docker setup.md",
+    "02 - KNOWLEDGE/dsa/readme.md",
+    "02 - KNOWLEDGE/dsa/map.canvas",
+    "02 - KNOWLEDGE/math/calculus.canvas",
+    "01 - PROJECTS/rag/tips.md",
+    "_meta/img/tips-20240629101923427.webp",
+    "_meta/img/tips-20240629101825726.webp",
+    "_meta/img/tips-20240629101434082.webp",
+    "_meta/img/tips-20240629101351848.webp",
+    "_meta/img/tips-20240629101331592.webp",
+    "01 - PROJECTS/rag/informe-tecnico.md",
+    "03 - SCHOOL/lineal-programming/8.min-cost-flow.md",
+    "03 - SCHOOL/lineal-programming/7.asignation-problem.md",
+    "03 - SCHOOL/pid/pid.md",
+    "_meta/draws/Drawing 2024-06-25 18.40.59.excalidraw.md",
+    "03 - SCHOOL/lineal-programming/6.transport-problem.md",
+    "02 - KNOWLEDGE/math/probability/4.distributions.md",
+    "_meta/img/informe-tecnico-20240622134625474.webp",
+    "_meta/img/informe-tecnico-20240622134621309.webp",
+    "01 - PROJECTS/rag",
+    "Untitled.canvas",
+    "_meta/img/8.min-cost-flow-20240619220924311.webp",
+    "_meta/img/8.min-cost-flow-20240619220904660.webp",
+    "_meta/img/8.min-cost-flow-20240619215938496.webp",
+    "02 - KNOWLEDGE/ai/prolog",
+    "02 - KNOWLEDGE/ai/knowledge-based-sys",
+    "02 - KNOWLEDGE/ai/search",
+    "03 - SCHOOL/isw2/taller2-slides.canvas",
+    "04 - SETUP/setup.canvas",
+    "03 - SCHOOL/Untitled.canvas",
+    "03 - SCHOOL/fs",
+    "_meta/img/Entity Relationship Diagram1.tif",
+    "02 - KNOWLEDGE/ai/search/poblacional-search/genetic",
+    "02 - KNOWLEDGE/ai/search/poblacional-search",
+    "setup/idea.canvas",
+    "01 - PROJECTS/coffee/concept.canvas",
+    "ideas.canvas"
+  ]
+}

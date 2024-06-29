@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"id":"7fe74217e6d4ecfc","x":-280,"y":-360,"width":380,"height":440,"type":"text","text":"- [ ] Nix Like Setup\nI need a setup thats highly customizable, easy to backup\n  - [ ] Make my dotfiles\n  - [ ] fix nvim errors\n  - [ ] raspberry pi can help \n\n- [ ] ai alfred\ni need a system that i can\n   1. Train with school documents and can perform a search on those documents\n   2. Maybe a Mixture of Experts"}
+	],
+	"edges":[]
+}

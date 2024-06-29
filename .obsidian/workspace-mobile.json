@@ -1,0 +1,212 @@
+{
+  "main": {
+    "id": "c3e6c7962b80272f",
+    "type": "split",
+    "children": [
+      {
+        "id": "8cd05df6cb4f318b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "47aa8a004b991211",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "school/pe/probabilidades/probabilidades.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bb7aea6afd1fd4ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "school/db/sql/optimization/index.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "964a6a0c5d8aed1c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "school/mic/diseno_teorico.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "80b0f399e81ae07b",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "8f972fadc994d142",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "c9270702210937a4",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "87320539ef6be4e7",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "2a08d9ed2d0b77ec",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency"
+          }
+        }
+      },
+      {
+        "id": "335f9d8061392e18",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "01e73442419a5882",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "50bfde5a11233611",
+        "type": "leaf",
+        "state": {
+          "type": "calendar",
+          "state": {}
+        }
+      },
+      {
+        "id": "ea8c10ab277244b6",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "school/db/sql/optimization/index.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "72c9d0e0110a2f23",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "school/db/sql/optimization/index.md"
+          }
+        }
+      },
+      {
+        "id": "8dcd17a3594b1fa4",
+        "type": "leaf",
+        "state": {
+          "type": "reminder-list",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false
+    }
+  },
+  "active": "bb7aea6afd1fd4ce",
+  "lastOpenFiles": [
+    "school/pe/probabilidades/probabilidades.md",
+    "school/db/sql/optimization/index.md",
+    "school/db/sql/optimization/optimization.md",
+    "school/mic/diseno_teorico.md",
+    "school/isw/proceso_software.md",
+    "school/mic/Tarea 1 sobre una tesis, hacer una critica.md",
+    "school/pending.md",
+    "school/pe/probabilidades/distribuciones.md",
+    "school/pe/probabilidades/variables-aleatorias.md",
+    "school/db/sql/optimization.md",
+    "school/isw/modelos.md",
+    "Pasted image 20240205223423.png",
+    "Pasted image 20240205223242.png",
+    "school/os/process_managment.md",
+    "seminario - pelicula - responder cuest.md",
+    "school/db/docker setup.md",
+    "school/mic/seminario - pelicula - responder cuest.md",
+    "school/mic/proceso_investigativo.md",
+    "school/pe/probabilidades.md",
+    "_draws/venn_diagram.excalidraw.md",
+    "school/db/informe tecnico.md",
+    "school/db/sql/DML.md",
+    "Pasted image 20240125230143.png",
+    "Pasted image 20240125225436.png",
+    "Pasted image 20240125230038.png",
+    "Pasted image 20240125225123.png",
+    "Pasted image 20240125225535.png",
+    "school/isw",
+    "⭐c-lang.md",
+    "Isw.md",
+    "todo.md",
+    "school/Untitled.md",
+    "school/Operative Systems/objetivos_t1.md",
+    "school/Operative Systems",
+    "⭐Chat Documents.md",
+    "windows",
+    "vim"
+  ]
+}

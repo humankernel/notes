@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://localhost:3000/#/ -->
+<html lang="en" class="reveal-full-page fontawesome-i2svg-active fontawesome-i2svg-complete"><script>function inject () {
+  function override() {
+    // Override video element canPlayType() function
+    var videoElem = document.createElement('video');
+    var origCanPlayType = videoElem.canPlayType.bind(videoElem);
+    videoElem.__proto__.canPlayType = makeModifiedTypeChecker(origCanPlayType);
+
+    // Override media source extension isTypeSupported() function
+    var mse = window.MediaSource;
+    // Check for MSE support before use
+    if (mse === undefined) return;
+    var origIsTypeSupported = mse.isTypeSupported.bind(mse);
+    mse.isTypeSupported = makeModifiedTypeChecker(origIsTypeSupported);
+  }
+
+  // return a custom MIME type checker that can defer to the original function
+  function makeModifiedTypeChecker(origChecker) {
+    // Check if a video type is allowed
+    return function (type) {
+      if (type === undefined) return '';
+
+      if (localStorage['h265ify-log_req'] === 'true')
+        console.log('type: '+ type);
+
+      var overriddentypes = ['hevc', 'x265', 'h265', 'hvc', 'hev'];
+
+      for (var i = 0; i < overriddentypes.length; i++) {
+        if (type.indexOf(overriddentypes[i]) !== -1) return 'probably';
+      }
+
+      // Otherwise, ask the browser
+      return origChecker(type);
+    };
+  }
+    override();
+}inject();</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title></title>
+    <style type="text/css">svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.3333333333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-both,.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-both,:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2.5em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1.25em}.svg-inline--fa.fa-stack-2x{height:2em;width:2.5em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}.svg-inline--fa .fa-primary{fill:var(--fa-primary-color,currentColor);opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa .fa-secondary{fill:var(--fa-secondary-color,currentColor);opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-primary{opacity:.4;opacity:var(--fa-secondary-opacity,.4)}.svg-inline--fa.fa-swap-opacity .fa-secondary{opacity:1;opacity:var(--fa-primary-opacity,1)}.svg-inline--fa mask .fa-primary,.svg-inline--fa mask .fa-secondary{fill:#000}.fad.fa-inverse{color:#fff}</style><link rel="stylesheet" href="./slides_files/reveal.css">
+    <link rel="stylesheet" href="./slides_files/strange.css" id="theme">
+    <link rel="stylesheet" href="./slides_files/monokai.css">
+	<link rel="stylesheet" href="./slides_files/layout.css">
+	<link rel="stylesheet" href="./slides_files/style.css">
+
+
+
+    <script defer="" src="./slides_files/all.min.js.download"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  <style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style><script type="text/javascript" id="MathJax-script" src="./slides_files/tex-mml-chtml.js.download" async=""></script><link rel="stylesheet" href="./slides_files/menu.css"><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("http://localhost:3000/plugin/math/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+</style></head>
+  <body class="has-dark-background reveal-viewport" data-new-gr-c-s-check-loaded="14.1061.0" data-gr-ext-installed="" style="transition: transform 0.8s ease 0s; --slide-width: 1920px; --slide-height: 1200px;">
+    <div class="reveal slide center focused has-horizontal-slides ready" role="application" data-transition-speed="slow" data-background-transition="fade" style="">
+      <div class="slides" style="width: 1920px; height: 1200px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.713542);"><section data-markdown="" data-markdown-parsed="true" class="drop present" style="top: 0px; display: block;"><!-- -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: #EEB73F; padding: 100px; box-sizing: border-box; position: absolute; left: 20%; top: 20%; height: 80%; width: 80%; display: flex; flex-direction: column; align-items: flex-end; justify-content: space-evenly" align="right">
+
+
+<h1 id="tarea-extraclase-de-mic" style="letter-spacing: 1.5rem">Tarea Extraclase de MIC<!-- --></h1>
+<h5 id="optimización-y-atracción-de-clientes-en-cafetería-el-aroma-mágico">Optimización y Atracción de Clientes en Cafetería "El Aroma Mágico"</h5>
+</div>
+</div></section><section data-markdown="" data-markdown-parsed="true" class="drop has-dark-background future" data-background-color="black" style="top: 0px; display: block;" hidden="" aria-hidden="true"><!-- -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="position: absolute; left: 10%; top: 25%; height: 50%; width: 30%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<p><strong style="font-size: 60px">"El Aroma Mágico"</strong><!-- --></p>
+<p><em>coffee shop</em></p>
+<br>
+La Cafetería "El Aroma Mágico" se erige como un espacio encantador en el corazón de la ciudad, con la misión de brindar a sus clientes una experiencia excepcional y la venta de productos de alta calidad.
+</div>
+
+     
+<div class="has-light-background" style="background-color: #EEB73F; position: absolute; left: 52%; top: 18%; height: 70%; width: 35%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+</div>
+
+<img src="./slides_files/coffee-logo.jpg" alt="" style="position: absolute; left: 49%; top: 23%; height: 60%; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+<!-- -->
+
+<h1 id="cafe" style="transform: rotate(90deg); position: absolute; left: 68%; top: 48%; height: 10%; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: center">Cafe<!-- --></h1>
+</div></section><section data-markdown="" data-markdown-parsed="true" class="drop has-dark-background future" data-background-color="black" style="top: 0px; display: block;" hidden="" aria-hidden="true"><!-- -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: #EEB73F; position: absolute; left: 0%; top: 15%; height: 85%; width: 81%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+</div>
+
+<div class="has-light-background" style="background-color: #EEB73F; padding: 50px; box-sizing: border-box; position: absolute; left: 0%; top: 15%; height: 85%; width: 27%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<img src="./slides_files/gestion-inceficiente.jpeg" alt="" style="width: 500px; height: 400px; object-fit: fill">
+
+
+<p style="font-size: 40px; text-align: left"><strong>Gestión de inventario ineficiente</strong></p>
+<!-- -->
+
+<p style="font-size: 24px">La falta de un sistema automatizado de gestión de inventario dificulta el seguimiento preciso de las existencias de productos.</p>
+<!-- -->
+</div>
+
+<div class="has-light-background" style="background-color: #EEB73F; padding: 50px; box-sizing: border-box; position: absolute; left: 27%; top: 15%; height: 85%; width: 27%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<img src="./slides_files/atencion-inceficiente.jpeg" alt="" style="width: 500px; height: 400px; object-fit: fill">
+
+
+<p style="font-size: 40px; text-align: center"><strong>Atención al cliente deficiente</strong></p>
+<!-- -->
+
+<p style="font-size: 24px">La falta de un proceso estructurado para la atención al cliente puede resultar en situaciones donde las quejas o sugerencias de los clientes no se abordan de manera oportuna o efectiva.</p>
+<!-- -->
+</div>
+
+<div class="has-light-background" style="background-color: #EEB73F; padding: 50px; box-sizing: border-box; position: absolute; left: 54%; top: 15%; height: 85%; width: 27%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<img src="./slides_files/analisis-inceficiente.jpeg" alt="" style="width: 500px; height: 400px; object-fit: fill">
+
+
+<p style="font-size: 40px; text-align: right"><strong>Falta de herramientas de análisis de datos</strong></p>
+<!-- -->
+
+<p style="font-size: 24px">Carece de un sistema o herramientas adecuadas para gestionar y analizar reportes de ventas</p>
+<!-- -->
+</div>
+
+<p style="font-size: 88px; transform: rotate(90deg); position: absolute; left: 57%; top: 48%; height: 20%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center">Desafios <!-- --></p>
+</div>
+
+<aside class="notes"><p>Estas problemáticas ilustran la necesidad de abordar las deficiencias en la gestión de inventario y la atención al cliente para mejorar la experiencia general ofrecida por la Cafetería "El Aroma Mágico". Al implementar soluciones efectivas en estas áreas, la cafetería podrá optimizar sus procesos internos y brindar un servicio de mayor calidad a sus clientes, lo que a su vez contribuirá a atraer y retener a una clientela más amplia.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="drop has-dark-background future" data-background-color="black" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 14%; top: 45%; height: 55%; width: 24%; display: flex; flex-direction: column; align-items: center; justify-content: space-between" align="justify">
+
+<h5 id="problema-científico"><strong>problema científico</strong></h5>
+<p style="font-size: 20px">¿Cómo se pueden optimizar los procesos de la cafetería "El Aroma Mágico" para aumentar la eficiencia operativa y mejorar la visibilidad y la entrada de clientes?  <!-- --></p>
+<img src="./slides_files/prob-cient.jpeg" alt="" style="max-height: 100%; max-width: 100%; width: 460px; height: 360px; object-fit: fill">
+
+</div>
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 38%; top: 45%; height: 55%; width: 24%; display: flex; flex-direction: column; align-items: center; justify-content: space-between" align="justify">
+
+<h5 id="objeto-de-estudio"><strong>objeto de estudio</strong></h5>
+<p style="font-size: 20px">sistemas de gestión de cafeterías<!-- --></p>
+<img src="./slides_files/objeto.jpeg" alt="" style="max-height: 100%; max-width: 100%; width: 460px; height: 360px; object-fit: fill">
+
+</div>
+
+
+
+<div class="" style="padding: 0 30px; box-sizing: border-box; position: absolute; left: 62%; top: 45%; height: 55%; width: 24%; display: flex; flex-direction: column; align-items: center; justify-content: space-between" align="justify">
+
+<h5 id="objetivo-general"><strong>objetivo general</strong></h5>
+<p style="font-size: 20px">Desarrollar un sistema de gestión que permita mejorar la eficiencia operativa y la calidad de servicio en la cafetería "El Aroma Mágico" <!-- --></p>
+<img src="./slides_files/coffee-shop.jpeg" alt="" style="max-height: 100%; max-width: 100%; width: 460px; height: 360px; object-fit: fill">
+
+</div>
+</div></section><section data-markdown="" data-markdown-parsed="true" class="drop has-dark-background future" data-background-color="black" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: #EEB73F; position: absolute; left: 5%; top: 0%; height: 100%; width: 35%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+</div>
+
+<div class="" style="transform: rotate(-90deg); position: absolute; left: -10%; top: 40%; height: 20%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+
+<h1 id="preguntas-cientificas-" style="font-size: 2em">Preguntas Cientificas <!-- --></h1>
+</div>
+
+<img src="./slides_files/preg-cient.jpeg" alt="" style="position: absolute; left: 28%; top: 10%; height: 400px; width: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+<img src="./slides_files/preg-cient1.jpeg" alt="" style="position: absolute; left: 28%; top: 50%; height: 400px; width: 600px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+
+<p style="font-size: 24px; position: absolute; left: 65%; top: 0%; height: 30%; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">¿Cuáles son los referentes teóricos clave asociados a la optimización de procesos en cafeterías?</p>
+<!-- -->
+
+<p style="font-size: 24px; position: absolute; left: 65%; top: 15%; height: 30%; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">¿Qué teorías pueden aportar más a la investigación sobre la mejora de la experiencia del cliente en establecimientos de este tipo?</p>
+<!-- -->
+
+<p style="font-size: 24px; position: absolute; left: 65%; top: 30%; height: 30%; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">¿Qué herramientas tecnológicas específicas se han utilizado con éxito en la optimización de procesos en cafeterías y cómo podrían aplicarse en el caso de la Cafetería "El Aroma Mágico" para mejorar la eficiencia operativa?</p>
+<!-- -->
+
+<p style="font-size: 24px; position: absolute; left: 65%; top: 50%; height: 30%; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">¿Qué metodologías de desarrollo de software son más adecuadas para diseñar e implementar soluciones innovadoras en la Cafetería "El Aroma Mágico" que impulsen la eficiencia operativa y la calidad del servicio?</p>
+<!-- -->
+</div></section><section data-markdown="" data-markdown-parsed="true" class="drop has-dark-background future" data-background-color="black" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<h2 id="tareas-de-investigación" style="position: absolute; left: 60%; top: 3%; height: 35%; width: 30%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">Tareas de Investigación<!-- --></h2>
+<div class="has-light-background" style="background-color: #EEB73F; position: absolute; left: 60%; top: 30%; height: 100%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+</div>
+<img src="./slides_files/tareas.jpeg" alt="" style="position: absolute; left: 62%; top: 32%; height: 500px; width: 700px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+
+<p style="font-size: 24px; position: absolute; left: 11%; top: 0%; height: 30%; width: 43%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">Evaluación de las estrategias implementadas por otras cafeterías y su impacto en la atracción de clientes para aplicar lecciones aprendidas en "El Aroma Mágico".</p>
+<!-- -->
+
+<p style="font-size: 24px; position: absolute; left: 11%; top: 10%; height: 30%; width: 43%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">Exploración de herramientas tecnológicas que puedan mejorar la eficiencia operativa y la interacción con los clientes en la cafetería.</p>
+<!-- -->
+
+<p style="font-size: 24px; position: absolute; left: 11%; top: 20%; height: 30%; width: 43%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">Implementación de estrategias de marketing efectivas para promocionar la cafetería, atraer nuevos clientes y fidelizar a los existentes.</p>
+<!-- -->
+
+<p style="font-size: 24px; position: absolute; left: 11%; top: 30%; height: 30%; width: 43%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">Capacitación del personal en técnicas de atención al cliente, procesos operativos eficientes y uso de tecnología para garantizar un servicio de calidad.</p>
+<!-- -->
+
+<p style="font-size: 24px; position: absolute; left: 0%; top: 40%; height: 30%; width: 43%; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">Validación de la propuesta de solución</p>
+<!-- -->
+</div></section><section data-markdown="" data-markdown-parsed="true" class="drop has-dark-background future" data-background-color="black" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: #EEB73F; position: absolute; left: 0%; top: 0%; height: 100%; width: 22%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+</div>
+
+<div class="" style="transform: rotate(-90deg); position: absolute; left: -15%; top: 40%; height: 20%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+
+<h2 id="principales-conceptos">Principales Conceptos</h2>
+<h5 id="fundamentación-teórica-del-tema-de-investigación">Fundamentación teórica del tema de investigación</h5>
+</div>
+
+<div class="" style="position: absolute; left: 60%; top: 12%; height: 10%; width: 15%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+
+<h5 id="barista">Barista</h5>
+<p style="font-size: 24px; display: flex; flex-direction: column; align-items: flex-end; justify-content: space-evenly" align="right">Prepara los cafes <!-- --></p>
+</div>
+
+<img src="./slides_files/barista.jpeg" alt="" style="position: absolute; left: 75%; top: 5%; height: 300px; width: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+
+<div class="" style="position: absolute; left: 30%; top: 45%; height: 10%; width: 15%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+
+<h5 id="gerente">Gerente</h5>
+<p style="font-size: 24px">Administrador <!-- --></p>
+</div>
+
+<img src="./slides_files/gerente.jpeg" alt="" style="position: absolute; left: 45%; top: 37%; height: 300px; width: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+
+
+<div class="" style="position: absolute; left: 60%; top: 78%; height: 10%; width: 15%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+
+<h5 id="cliente">Cliente</h5>
+<p style="font-size: 24px">Parsona a la que se le ofrece el servicio <!-- --></p>
+</div>
+
+<img src="./slides_files/cliente.jpeg" alt="" style="position: absolute; left: 75%; top: 70%; height: 300px; width: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+</div>
+
+<aside class="notes"><p>La fundamentación teórica del tema de investigación se enfoca en la automatización de los procesos para la Cafetería "El Aroma Mágico". Se busca mejorar la experiencia del cliente y dar solución al problema de la falta de clientes.</p>
+<p>Para esto se analizarán los conceptos asociados los cuales son importantes para comprender el contexto de la organización</p>
+<p><strong>Cliente</strong>: Persona o entidad que adquiere bienes o servicios de una empresa.</p>
+<p><strong>Administrador</strong>: Responsable de la gestión y supervisión de los recursos y procesos de una organización.</p>
+<p><strong>Cafetería</strong>: Establecimiento especializado en la preparación y venta de café de alta calidad. (Bravo 2024)</p>
+<p><strong>Barista:</strong> es el artista del café. Preparan y sirven una variedad de bebidas de café, mantienen limpia la zona de trabajo e interactúan con los clientes. (Bravo 2024)</p>
+<p><strong>Producto</strong>: Bien tangible o intangible ofrecido en el mercado para satisfacer necesidades o deseos de los consumidores.</p>
+<p><strong>Ventas</strong>: Proceso de intercambio de bienes o servicios por dinero, esencial para la generación de ingresos de un negocio.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="drop has-dark-background future" data-background-color="black" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<grid absolute="true" drag="100 100" drop="0 0">
+<div class="has-light-background" style="background-color: #EEB73F; position: absolute; left: 0%; top: 0%; height: 100%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="">
+
+<img src="./slides_files/cucheria.jpeg" alt="" style="width: 400px; height: 300px; object-fit: fill">
+
+<img src="./slides_files/wapa.jpg" alt="" style="width: 400px; height: 300px; object-fit: fill">
+
+</div>
+
+<div class="" style="transform: rotate(90deg); position: absolute; left: 60%; top: 43%; height: 15%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+
+<h1 id="análisis-de-mercado">Análisis de mercado</h1>
+<h4 id="homologos">Homologos</h4>
+</div>
+
+<div class="" style="padding: 130px 85px; box-sizing: border-box; position: absolute; left: 40%; top: 0%; height: 100%; width: 40%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+
+<h3 id="la-chuchería">La chuchería</h3>
+<p style="font-size: 24px; padding: 0 60px 0 0; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">Tiene una página web la cual contiene sus ofertas, su dirección, y un apartado para los comentarios tanto positivos como negativos lo que ha impulsado el marketing y esto ha impulsado las ventas y la llegada a un público más variado<!-- --></p>
+<h3 id="el-wapa">El Wapa</h3>
+<p style="font-size: 24px; padding: 0 60px 0 0; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">Esta cuenta con un marketing a través de las redes sociales lo que la ha puesto como unas de las mejores de la Habana en su página web. Tiene en su página web esta cuenta con su menú ,un repertorio de los productos que vende, su horario, número ubicación, un apartado para los comentarios<!-- --></p>
+</div>
+
+<aside class="notes"><p>Se ha realizado un análisis exhaustivo de la competencia directa e indirecta de la cafetería. Se identificaron otras cafeterías en la zona, se analizaron sus propuestas de valor, precios, calidad de servicio y estrategias de marketing. A modo de ejemplo, se destaca la cafetería "La chuchería", que se ha posicionado como líder en café de especialidad en la zona y es una de las pocas que cuentan con una página web.</p>
+</aside></grid></section><section data-markdown="" data-markdown-parsed="true" class="drop has-dark-background future" data-background-color="black" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="" style="transform: rotate(90deg); position: absolute; left: 56%; top: 43%; height: 15%; width: 60%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+<h2 id="fundamentación-del-proceso-de-software">Fundamentación del proceso de software</h2>
+</div>
+
+<div class="" style="position: absolute; left: 0%; top: 10%; height: 40%; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+<img src="./slides_files/visibilidad.jpeg" alt="" style="max-width: 100%; max-height: 100%; width: 480px; object-fit: fill">
+
+</div>
+<div class="" style="position: absolute; left: 5%; top: 50%; height: 40%; width: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+
+<h3 id="visibilidad">Visibilidad</h3>
+<h1 id="">+</h1>
+</div>
+
+<div class="" style="position: absolute; left: 25%; top: 10%; height: 40%; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+<img src="./slides_files/alcanze.jpeg" alt="" style="max-width: 100%; max-height: 100%; width: 480px; object-fit: fill">
+
+</div>
+<div class="" style="padding: 0 10px 0 20px; box-sizing: border-box; position: absolute; left: 27%; top: 50%; height: 40%; width: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+
+<h3 id="alcanze">Alcanze</h3>
+<h1 id="-1">+</h1>
+</div>
+
+<div class="" style="position: absolute; left: 50%; top: 10%; height: 40%; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+<img src="./slides_files/cliente.jpeg" alt="" style="max-width: 100%; max-height: 100%; width: 480px; object-fit: fill">
+
+</div>
+<div class="" style="position: absolute; left: 50%; top: 50%; height: 40%; width: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+
+<h3 id="clientes">Clientes</h3>
+<h1 id="-2">+</h1>
+</div>
+</div>
+
+<aside class="notes"><p>La creación de una página web para la cafetería es fundamental para establecer una presencia en línea y llegar a un público más amplio. </p>
+<p>Una página web bien diseñada y optimizada puede servir como una poderosa herramienta de marketing, permitiendo a la cafetería mostrar su menú, promociones especiales, horarios de apertura y ubicación. Además, una página web puede facilitar la interacción con los clientes, permitiendo realizar reservas en línea, pedidos para llevar o incluso ofrecer un servicio de entrega a domicilio.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="drop has-dark-background future" data-background-color="black" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1200px; width: 1920px; min-height: 1200px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: #EEB73F; position: absolute; left: 5%; top: 0%; height: 100%; width: 63%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+</div>
+
+<div class="" style="position: absolute; left: 25%; top: 0%; height: 100%; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+<img src="./slides_files/vp.png" alt="" style="width: 350px; height: 300px; object-fit: fill">
+
+<img src="./slides_files/next.png" alt="" style="width: 350px; height: 300px; object-fit: fill">
+
+<img src="./slides_files/figma.png" alt="" style="width: 350px; height: 300px; object-fit: fill">
+
+</div>
+
+<h1 id="herramientas" style="transform: rotate(-90deg); position: absolute; left: 38%; top: 46%; height: 10%; width: 40%; display: flex; flex-direction: column; align-items: center; justify-content: center">Herramientas<!-- --></h1>
+<div class="" style="padding: 150px 50px; box-sizing: border-box; position: absolute; left: 70%; top: 0%; height: 100%; width: 25%; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+
+<h6 id="visual-paradigm">Visual Paradigm</h6>
+<p style="font-size: 20px">Herramienta de modelado visual y diseño de software que se utiliza ampliamente en la industria del desarrollo de software</p>
+<!-- -->
+
+<br>
+
+<h6 id="nextjs">NextJS</h6>
+<p style="font-size: 20px">Next.js es un framework de React que permite funcionalidades como la renderizacion de la pagina del lado del servidor. Es ampliamente utilizado para la creación de aplicaciones web modernas</p>
+<!-- -->
+
+<br>
+
+<h6 id="figma">Figma</h6>
+<p style="font-size: 20px">Usado para la creación del prototipo de la página, sus elementos visuales como logotipos, imágenes promocionales o banners</p>
+<!-- -->
+</div>
+</div></section></div>
+    <div id="customcontrols"><button title="Show/hide controls"><span id="collapse-customcontrols"><svg class="svg-inline--fa fa-chevron-down fa-w-14" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg><!-- <i class="fa fa-chevron-down"></i> Font Awesome fontawesome.com --></span><span id="expand-customcontrols"><svg class="svg-inline--fa fa-chevron-up fa-w-14" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="chevron-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg><!-- <i class="fa fa-chevron-up"></i> Font Awesome fontawesome.com --></span></button><ul><li id="toggle-overview"><button title="Toggle overview (O)" onclick="Reveal.toggleOverview();"><svg class="svg-inline--fa fa-th fa-w-16" aria-hidden="true" focusable="false" data-prefix="fa" data-icon="th" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"></path></svg><!-- <i class="fa fa-th"></i> Font Awesome fontawesome.com --></button></li></ul></div><div class="backgrounds"><div class="slide-background drop present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background has-dark-background drop future" data-background-hash="0blacknullnullnullnull" data-loaded="true" style="background-color: black; display: block;"><div class="slide-background-content"></div></div><div class="slide-background has-dark-background drop future" data-background-hash="0blacknullnullnullnull" data-loaded="true" style="background-color: black; display: block;"><div class="slide-background-content"></div></div><div class="slide-background has-dark-background drop future" data-background-hash="0blacknullnullnullnull" style="background-color: black; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-dark-background drop future" data-background-hash="0blacknullnullnullnull" style="background-color: black; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-dark-background drop future" data-background-hash="0blacknullnullnullnull" style="background-color: black; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-dark-background drop future" data-background-hash="0blacknullnullnullnull" style="background-color: black; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-dark-background drop future" data-background-hash="0blacknullnullnullnull" style="background-color: black; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-dark-background drop future" data-background-hash="0blacknullnullnullnull" style="background-color: black; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-dark-background drop future" data-background-hash="0blacknullnullnullnull" style="background-color: black; display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: none;"></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled highlight" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Tarea Extraclase de MIC Optimización y Atracción de Clientes en Cafetería "El Aroma Mágico" </div><div class="slide-menu-button"><a href="http://localhost:3000/#"><svg class="svg-inline--fa fa-bars fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg><!-- <i class="fas fa-bars"></i> Font Awesome fontawesome.com --></a></div></div>
+
+    <script src="./slides_files/reveal.js.download"></script>
+
+    <script src="./slides_files/markdown.js.download"></script>
+    <script src="./slides_files/highlight.js.download"></script>
+    <script src="./slides_files/zoom.js.download"></script>
+    <script src="./slides_files/notes.js.download"></script>
+    <script src="./slides_files/math.js.download"></script>
+	<script src="./slides_files/mermaid.js.download"></script>
+	<script src="./slides_files/chart.min.js.download"></script>
+	<script src="./slides_files/plugin.js.download"></script>
+	<script src="./slides_files/menu.js.download"></script>
+	<script src="./slides_files/plugin(1).js.download"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: '/plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+				{id: 'toggle-overview',
+				title: 'Toggle overview (O)',
+				icon: '<i class="fa fa-th"></i>',
+				action: 'Reveal.toggleOverview();'
+				},
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1920,"height":1200,"margin":0,"controls":true,"progress":true,"slideNumber":false,"transition":"slide","transitionSpeed":"slow"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  
+
+  
+
+<div class="slide-menu-wrapper"><nav class="slide-menu slide-menu--left" style="font-family: CascadiaCode, Helvetica, sans-serif;"><ol class="slide-menu-toolbar"><li data-button="0" class="toolbar-panel-button active-toolbar-button" data-panel="Slides"><svg class="svg-inline--fa fa-images fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="images" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v208c0 44.112 35.888 80 80 80h336zm96-80V80c0-26.51-21.49-48-48-48H144c-26.51 0-48 21.49-48 48v256c0 26.51 21.49 48 48 48h384c26.51 0 48-21.49 48-48zM256 128c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-96 144l55.515-55.515c4.686-4.686 12.284-4.686 16.971 0L272 256l135.515-135.515c4.686-4.686 12.284-4.686 16.971 0L512 208v112H160v-48z"></path></svg><!-- <i class="fas fa-images"></i> Font Awesome fontawesome.com --><br><span class="slide-menu-toolbar-label">Slides</span></li><li id="close" class="toolbar-panel-button"><svg class="svg-inline--fa fa-times fa-w-11" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512" data-fa-i2svg=""><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg><!-- <i class="fas fa-times"></i> Font Awesome fontawesome.com --><br><span class="slide-menu-toolbar-label">Close</span></li></ol><div data-panel="Slides" class="slide-menu-panel active-menu-panel"><ul class="slide-menu-items"><li class="slide-menu-item active" data-item="0" data-slide-h="0" data-slide-v="0"><svg class="svg-inline--fa fa-check-circle fa-w-16 fa-fw past" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fas fa-check-circle fa-fw past"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16 fa-fw active" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-right fa-fw active"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-circle fa-w-16 fa-fw future" aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"></path></svg><!-- <i class="far fa-circle fa-fw future"></i> Font Awesome fontawesome.com --><span class="slide-menu-item-title">Tarea Extraclase de MIC</span></li><li class="slide-menu-item future" data-item="1" data-slide-h="1" data-slide-v="0"><svg class="svg-inline--fa fa-check-circle fa-w-16 fa-fw past" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fas fa-check-circle fa-fw past"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16 fa-fw active" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-right fa-fw active"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-circle fa-w-16 fa-fw future" aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"></path></svg><!-- <i class="far fa-circle fa-fw future"></i> Font Awesome fontawesome.com --><span class="slide-menu-item-title">Cafe</span></li><li class="slide-menu-item no-title future" data-item="2" data-slide-h="2" data-slide-v="0"><svg class="svg-inline--fa fa-check-circle fa-w-16 fa-fw past" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fas fa-check-circle fa-fw past"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16 fa-fw active" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-right fa-fw active"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-circle fa-w-16 fa-fw future" aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"></path></svg><!-- <i class="far fa-circle fa-fw future"></i> Font Awesome fontawesome.com --><span class="slide-menu-item-title">Slide 3</span></li><li class="slide-menu-item future" data-item="3" data-slide-h="3" data-slide-v="0"><svg class="svg-inline--fa fa-check-circle fa-w-16 fa-fw past" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fas fa-check-circle fa-fw past"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16 fa-fw active" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-right fa-fw active"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-circle fa-w-16 fa-fw future" aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"></path></svg><!-- <i class="far fa-circle fa-fw future"></i> Font Awesome fontawesome.com --><span class="slide-menu-item-title">problema científico</span></li><li class="slide-menu-item future" data-item="4" data-slide-h="4" data-slide-v="0"><svg class="svg-inline--fa fa-check-circle fa-w-16 fa-fw past" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fas fa-check-circle fa-fw past"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16 fa-fw active" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-right fa-fw active"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-circle fa-w-16 fa-fw future" aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"></path></svg><!-- <i class="far fa-circle fa-fw future"></i> Font Awesome fontawesome.com --><span class="slide-menu-item-title">Preguntas Cientificas </span></li><li class="slide-menu-item future" data-item="5" data-slide-h="5" data-slide-v="0"><svg class="svg-inline--fa fa-check-circle fa-w-16 fa-fw past" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fas fa-check-circle fa-fw past"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16 fa-fw active" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-right fa-fw active"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-circle fa-w-16 fa-fw future" aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"></path></svg><!-- <i class="far fa-circle fa-fw future"></i> Font Awesome fontawesome.com --><span class="slide-menu-item-title">Tareas de Investigación</span></li><li class="slide-menu-item future" data-item="6" data-slide-h="6" data-slide-v="0"><svg class="svg-inline--fa fa-check-circle fa-w-16 fa-fw past" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fas fa-check-circle fa-fw past"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16 fa-fw active" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-right fa-fw active"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-circle fa-w-16 fa-fw future" aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"></path></svg><!-- <i class="far fa-circle fa-fw future"></i> Font Awesome fontawesome.com --><span class="slide-menu-item-title">Principales Conceptos</span></li><li class="slide-menu-item future" data-item="7" data-slide-h="7" data-slide-v="0"><svg class="svg-inline--fa fa-check-circle fa-w-16 fa-fw past" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fas fa-check-circle fa-fw past"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16 fa-fw active" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-right fa-fw active"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-circle fa-w-16 fa-fw future" aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"></path></svg><!-- <i class="far fa-circle fa-fw future"></i> Font Awesome fontawesome.com --><span class="slide-menu-item-title">Análisis de mercado</span></li><li class="slide-menu-item future" data-item="8" data-slide-h="8" data-slide-v="0"><svg class="svg-inline--fa fa-check-circle fa-w-16 fa-fw past" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fas fa-check-circle fa-fw past"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16 fa-fw active" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-right fa-fw active"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-circle fa-w-16 fa-fw future" aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"></path></svg><!-- <i class="far fa-circle fa-fw future"></i> Font Awesome fontawesome.com --><span class="slide-menu-item-title">Fundamentación del proceso de software</span></li><li class="slide-menu-item future" data-item="9" data-slide-h="9" data-slide-v="0"><svg class="svg-inline--fa fa-check-circle fa-w-16 fa-fw past" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg><!-- <i class="fas fa-check-circle fa-fw past"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-arrow-alt-circle-right fa-w-16 fa-fw active" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-alt-circle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zM140 300h116v70.9c0 10.7 13 16.1 20.5 8.5l114.3-114.9c4.7-4.7 4.7-12.2 0-16.9l-114.3-115c-7.6-7.6-20.5-2.2-20.5 8.5V212H140c-6.6 0-12 5.4-12 12v64c0 6.6 5.4 12 12 12z"></path></svg><!-- <i class="fas fa-arrow-alt-circle-right fa-fw active"></i> Font Awesome fontawesome.com --><svg class="svg-inline--fa fa-circle fa-w-16 fa-fw future" aria-hidden="true" focusable="false" data-prefix="far" data-icon="circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200z"></path></svg><!-- <i class="far fa-circle fa-fw future"></i> Font Awesome fontawesome.com --><span class="slide-menu-item-title">Herramientas</span></li></ul></div></nav><div class="slide-menu-overlay"></div></div></body><!-- created with Advanced Slides --><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

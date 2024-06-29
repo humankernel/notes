@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Cascadia Code';
+    src: url('./CascadiaCodePL.ttf.ttf') format('ttf'),
+         url('./CascadiaCodePL.ttf.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cascadia Code Mono';
+    src: url('./CascadiaMonoPL.ttf') format('ttf'),
+         url('./CascadiaMonoPL.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cascadia Code Mono';
+    src: url('./CascadiaMonoPLItalic.ttf') format('ttf'),
+         url('./CascadiaMonoPLItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Cascadia Code';
+    src: url('./CascadiaCodePLItalic.ttf') format('ttf'),
+         url('./CascadiaCodePLItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cascadia Code';
+    src: url('./CascadiaCodePL.ttf') format('ttf'),
+         url('./CascadiaCodePL.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cascadia Code';
+    src: url('./CascadiaCodePLItalic.ttf.ttf') format('ttf'),
+         url('./CascadiaCodePLItalic.ttf.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}

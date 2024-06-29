@@ -1,0 +1,229 @@
+{
+  "nodes": [
+    {
+      "id": "8acbb83652ce365c",
+      "type": "group",
+      "x": 1400,
+      "y": -2150,
+      "width": 1700,
+      "height": 1040,
+      "color": "4",
+      "label": "extras"
+    },
+    {
+      "id": "79a44d7dabd060a5",
+      "type": "group",
+      "x": -80,
+      "y": -2020,
+      "width": 700,
+      "height": 1820,
+      "color": "3",
+      "label": "🪟 windows"
+    },
+    {
+      "id": "d5ce56b332f094e9",
+      "type": "group",
+      "x": -340,
+      "y": -1540,
+      "width": 1580,
+      "height": 560,
+      "color": "4",
+      "label": "dev"
+    },
+    {
+      "id": "1619434a313f66a0",
+      "type": "group",
+      "x": 860,
+      "y": -2020,
+      "width": 380,
+      "height": 1820,
+      "color": "3",
+      "label": "🐧 linux"
+    },
+    {
+      "id": "8bfb17917e5dcfd6",
+      "type": "group",
+      "x": -340,
+      "y": -1960,
+      "width": 1580,
+      "height": 347,
+      "color": "1",
+      "label": "core"
+    },
+    {
+      "id": "944237830087a152",
+      "type": "group",
+      "x": -340,
+      "y": -880,
+      "width": 1580,
+      "height": 320,
+      "color": "4",
+      "label": "media"
+    },
+    {
+      "id": "a500cf78f69b7b1e",
+      "type": "file",
+      "file": "04 - SETUP/wsl.md",
+      "subpath": "#WSL",
+      "x": -40,
+      "y": -1503,
+      "width": 280,
+      "height": 100
+    },
+    {
+      "id": "120d638b5009c08f",
+      "type": "text",
+      "text": "# dev\n**ide**\n- nvim\n- vscode\n\n**git**\n- git\n- github desktop\n\n- python",
+      "x": -40,
+      "y": -1341,
+      "width": 280,
+      "height": 321
+    },
+    {
+      "id": "be079ceb96af4d08",
+      "type": "text",
+      "text": "# player\n- potplayer\n- mpv\n- aimp",
+      "x": -40,
+      "y": -840,
+      "width": 280,
+      "height": 160
+    },
+    {
+      "id": "88d457aef0139c14",
+      "type": "text",
+      "text": "- directx 9, 10, 11\n- visual c++\n- .net 3.5, 4.5\n- Nvidia\n\n**utils**\n- ddu\n- driver booster\n- nvidia profile inspector",
+      "x": -40,
+      "y": -1940,
+      "width": 280,
+      "height": 280
+    },
+    {
+      "id": "4ff58364b41e36ae",
+      "type": "text",
+      "text": "# performance\n- msi afterburner\n- mem reduct",
+      "x": 1480,
+      "y": -1723,
+      "width": 260,
+      "height": 123
+    },
+    {
+      "id": "3df63a1ed7a4db08",
+      "type": "text",
+      "text": "# office\n- microsoft office",
+      "x": 1790,
+      "y": -2090,
+      "width": 260,
+      "height": 115
+    },
+    {
+      "id": "42cd6827bdf37e88",
+      "type": "text",
+      "text": "# customization\n\n**fonts**\n- [subframe7536/maple-font](https://github.com/subframe7536/Maple-font)\n- [microsoft/cascadia-code](https://github.com/microsoft/cascadia-*code*)\n\n**wallpapers**\n- wallpaper engine",
+      "x": 2720,
+      "y": -2088,
+      "width": 300,
+      "height": 520
+    },
+    {
+      "id": "826d17c07bff07b4",
+      "type": "text",
+      "text": "# clean\n\n**uninstaller**\n- iobit uninstaller\n- revo uninstaller\n\n**privacy**\n- w10 privacy\n- destroy windows 10 spying\n- oosu10\n- windows repair toolbox",
+      "x": 2400,
+      "y": -1521,
+      "width": 260,
+      "height": 360
+    },
+    {
+      "id": "1aedaaa7255e9de6",
+      "type": "text",
+      "text": "# social\n- unigram\n- whatsapp",
+      "x": 2720,
+      "y": -1521,
+      "width": 300,
+      "height": 135
+    },
+    {
+      "id": "db6a1bd308bdf9bf",
+      "type": "text",
+      "text": "# disk utils\n\n**partition**\n- minitool partition wizard\n- easeUS partition master\n\n**benchmark**\n- as ssd benchmark\n- crystal disk info\n\n**recovery**\n- easeUS data recovery\n\n**info**\n- hdsentinel",
+      "x": 2400,
+      "y": -2088,
+      "width": 260,
+      "height": 520
+    },
+    {
+      "id": "a3684934d93b4c98",
+      "type": "text",
+      "text": "# general\n- powertoys\n- obsidian\n\n**fzf**\n- everithing\n\n**copy**\n- teracopy\n\n**encrypt**\n- veracrypt\n\n**vnc**\n- moonlight + sunshine\n- parsec\n\n**draw**\n- krita\n- virtualtablet",
+      "x": 1790,
+      "y": -1933,
+      "width": 260,
+      "height": 640
+    },
+    {
+      "id": "5ee8a51718d7a6cb",
+      "type": "text",
+      "text": "# zip + iso\n\n- 7z\n- compactGUI\n- daemon tools",
+      "x": 1470,
+      "y": -1030,
+      "width": 280,
+      "height": 160
+    },
+    {
+      "id": "0932e71fa4db124f",
+      "type": "text",
+      "text": "# network\n\n**vpn**\n- cloudflare warp\n- windscribe\n- proton vpn\n\n**manager**\n- netsetman\n\n**firewall**\n- simplewall\n- netlimiter\n\n**hostpot**\n- marswifi\n\n**info**\n- glasswire",
+      "x": 1830,
+      "y": -1030,
+      "width": 260,
+      "height": 560
+    },
+    {
+      "id": "f6e31ee3bc128e60",
+      "type": "file",
+      "file": "04 - SETUP/os.md",
+      "x": 2150,
+      "y": -1030,
+      "width": 260,
+      "height": 380
+    },
+    {
+      "id": "eba2f30b6c6031aa",
+      "type": "text",
+      "text": "# media center\n- plex\n- filebot",
+      "x": 2100,
+      "y": -1753,
+      "width": 260,
+      "height": 140
+    },
+    {
+      "id": "60c405d03b1de757",
+      "type": "text",
+      "text": "# downloader\n\n- jdownloader 2\n- qBittorrent",
+      "x": 2100,
+      "y": -1933,
+      "width": 260,
+      "height": 150
+    },
+    {
+      "id": "dfb36740ba30a7ab",
+      "type": "text",
+      "text": "# vm\n- virtualbox",
+      "x": 2100,
+      "y": -1573,
+      "width": 260,
+      "height": 100
+    },
+    {
+      "id": "9cc6c42ef66ba7e0",
+      "type": "text",
+      "text": "# format converter\n\n- handbrake",
+      "x": 2100,
+      "y": -2090,
+      "width": 260,
+      "height": 110
+    }
+  ],
+  "edges": [],
+  "metadata": {}
+}

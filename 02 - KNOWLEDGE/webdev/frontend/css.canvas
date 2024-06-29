@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"type":"file","file":"_meta/img/box_model.svg","id":"6e7aad86a1c16163","x":-43,"y":-110,"width":400,"height":274},
+		{"type":"file","file":"_meta/img/selector.svg","id":"21dcc6106d32fe39","x":-43,"y":249,"width":400,"height":214},
+		{"type":"file","file":"_meta/img/cascade.svg","id":"187c32ab1d96a2f2","x":447,"y":-110,"width":400,"height":168},
+		{"type":"file","file":"_meta/img/cascade.webp","id":"c8aa03955ddb80f9","x":447,"y":138,"width":399,"height":223},
+		{"type":"file","file":"_meta/img/specificity.svg","id":"a2844e81ad6fdb48","x":940,"y":-110,"width":400,"height":237},
+		{"type":"file","file":"_meta/img/hsl.svg","id":"4b061858dbbb2349","x":940,"y":205,"width":400,"height":239},
+		{"type":"file","file":"_meta/img/sizing_units.svg","id":"aff8fcb2aa844dea","x":1442,"y":-110,"width":399,"height":101},
+		{"type":"file","file":"_meta/img/layout.webp","id":"12ea9ed15b064991","x":1442,"y":127,"width":400,"height":279}
+	],
+	"edges":[]
+}

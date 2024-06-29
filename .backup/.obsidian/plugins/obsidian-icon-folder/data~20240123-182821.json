@@ -1,0 +1,46 @@
+{
+  "settings": {
+    "migrated": 3,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "SiC",
+      "FarFilePdf",
+      "FasPencil",
+      "FarImages",
+      "LiBookTemplate"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInFrontmatterEnabled": false,
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true
+  },
+  "db": "LiDatabase",
+  "dsa": "FabUncharted",
+  "git": "FabGithub",
+  "linux": "FabLinux",
+  "math": {
+    "iconName": "BoBxMath",
+    "inheritanceIcon": "BoBxMath"
+  },
+  "python": {
+    "iconName": "FabPython",
+    "inheritanceIcon": "SiPython"
+  },
+  "webdev": "SiHtml5",
+  "asm": "SiAssemblyscript",
+  "arquitecture": "LiComputer",
+  "webdev/You Dont Know JS Yet - Kyle Simpson.pdf": "FarFilePdf",
+  "c": "SiC"
+}

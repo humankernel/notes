@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {
+      "id": "b8a8fa2b5ff033e2",
+      "type": "file",
+      "file": "01 - PROJECTS/coffee/schema.md",
+      "x": -440,
+      "y": 120,
+      "width": 540,
+      "height": 920
+    },
+    {
+      "id": "569cf7c8828c2749",
+      "type": "file",
+      "file": "_meta/draws/coffee-map.excalidraw.md",
+      "x": -440,
+      "y": -160,
+      "width": 600,
+      "height": 240
+    },
+    {
+      "id": "3e559b33a87aff2b",
+      "type": "file",
+      "file": "_meta/draws/coffee-landing-page.excalidraw.md",
+      "x": 200,
+      "y": -160,
+      "width": 380,
+      "height": 1000
+    }
+  ],
+  "edges": [],
+  "metadata": {}
+}

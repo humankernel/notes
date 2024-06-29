@@ -1,0 +1,7 @@
+
+
+
+![[scanner-algo.excalidraw]]
+
+
+

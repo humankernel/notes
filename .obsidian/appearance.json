@@ -1,0 +1,12 @@
+{
+  "accentColor": "",
+  "theme": "system",
+  "showViewHeader": false,
+  "cssTheme": "Border",
+  "baseFontSize": 16,
+  "nativeMenus": false,
+  "interfaceFontFamily": "",
+  "textFontFamily": "Inter",
+  "monospaceFontFamily": "Maple Mono NF",
+  "baseFontSizeAction": true
+}

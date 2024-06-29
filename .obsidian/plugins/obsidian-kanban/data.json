@@ -1,0 +1,4 @@
+{
+  "hide-tags-in-title": true,
+  "new-note-template": "_meta/templates/kanban.md"
+}
