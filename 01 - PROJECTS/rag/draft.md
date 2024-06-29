@@ -1,5 +1,5 @@
 
-## Resumen 
+## Resumen test
 
 Este informe detalla el desarrollo y evaluación de un chatbot basado en la técnica RAG (Retrieval-Augmented Generation). La aplicación fue desarrollada utilizando TypeScript y NextJS tanto para el frontend como para el backend, con la ayuda de la biblioteca Langchain y una base de datos Postgres con la extensión `pg-vector` para la gestión de vectores. A pesar de las limitaciones y errores observados, el chatbot representa un esfuerzo inicial en la implementación de un sistema de respuesta automática mejorado mediante la recuperación de información.
 
