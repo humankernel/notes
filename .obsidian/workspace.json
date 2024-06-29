@@ -34,7 +34,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 - PROJECTS/rag/tips.md",
+                "file": "01 - PROJECTS/rag/draft.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -71,7 +71,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "informe tecnico",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,8 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 237.5,
-    "collapsed": true
+    "width": 237.5
   },
   "right": {
     "id": "4bd96c6804f52835",
@@ -101,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01 - PROJECTS/rag/tips.md",
+                "file": "01 - PROJECTS/rag/draft.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +124,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 - PROJECTS/rag/tips.md"
+                "file": "01 - PROJECTS/rag/draft.md"
               }
             }
           },
@@ -135,7 +134,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "01 - PROJECTS/rag/tips.md"
+                "file": "01 - PROJECTS/rag/draft.md"
               }
             }
           }
@@ -159,9 +158,14 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "2e93acbdfd4833f8",
+  "active": "b4a4b7dd40dc82cb",
   "lastOpenFiles": [
+    "01 - PROJECTS/rag/tips.md",
+    "01 - PROJECTS/rag/draft.md",
+    "_meta/img/01 How it works.svg",
     "03 - SCHOOL/task.md",
+    "_meta/img/informe-tecnico-20240622134621309.webp",
+    "_meta/img/tips-20240629104317522.webp",
     "task.md",
     "04 - SETUP/homelab.md",
     "04 - SETUP/crazy_idea.excalidraw",
@@ -184,26 +188,20 @@
     "02 - KNOWLEDGE/dsa/readme.md",
     "02 - KNOWLEDGE/dsa/map.canvas",
     "02 - KNOWLEDGE/math/calculus.canvas",
-    "01 - PROJECTS/rag/tips.md",
     "_meta/img/tips-20240629101923427.webp",
     "_meta/img/tips-20240629101825726.webp",
     "_meta/img/tips-20240629101434082.webp",
     "_meta/img/tips-20240629101351848.webp",
     "_meta/img/tips-20240629101331592.webp",
-    "01 - PROJECTS/rag/informe-tecnico.md",
     "03 - SCHOOL/lineal-programming/8.min-cost-flow.md",
     "03 - SCHOOL/lineal-programming/7.asignation-problem.md",
     "03 - SCHOOL/pid/pid.md",
     "_meta/draws/Drawing 2024-06-25 18.40.59.excalidraw.md",
     "03 - SCHOOL/lineal-programming/6.transport-problem.md",
-    "02 - KNOWLEDGE/math/probability/4.distributions.md",
     "_meta/img/informe-tecnico-20240622134625474.webp",
-    "_meta/img/informe-tecnico-20240622134621309.webp",
     "01 - PROJECTS/rag",
     "Untitled.canvas",
     "_meta/img/8.min-cost-flow-20240619220924311.webp",
-    "_meta/img/8.min-cost-flow-20240619220904660.webp",
-    "_meta/img/8.min-cost-flow-20240619215938496.webp",
     "02 - KNOWLEDGE/ai/prolog",
     "02 - KNOWLEDGE/ai/knowledge-based-sys",
     "02 - KNOWLEDGE/ai/search",

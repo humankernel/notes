@@ -66,7 +66,7 @@
   "Appearance-dark@@input-radius-dark": 6,
   "Appearance-dark@@input-shadow-dark": "inset 0 0 0 1px rgba(205, 217, 229, 0.1)",
   "Appearance-dark@@input-shadow-hover-dark": "inset 0 0 0 1px rgb(118, 131, 144)",
-  "Components@@tab-autohide": true,
+  "Components@@tab-autohide": false,
   "Components@@status-bar-autohide": false,
   "Components@@Ribbon-autohide": false,
   "Components@@nav-header-autohide": false,

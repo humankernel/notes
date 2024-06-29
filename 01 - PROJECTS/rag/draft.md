@@ -30,13 +30,17 @@ Una aplicación típica de RAG tiene dos componentes principales:
 	- division del contenido en fragmentos manejables
 	- almacenamiento de estos fragmentos en una base de datos de vectores para la posterior búsqueda
 
-![[informe-tecnico-20240622134621309.webp]]
+
+
+
+
+![](informe-tecnico-20240622134621309.webp)
 
 
 
 **Recuperación y Generación:** Durante el tiempo de ejecución, este componente toma la consulta del usuario, recupera los fragmentos relevantes de la base de datos y utiliza un modelo de lenguaje para generar una respuesta basada en los datos recuperados.
 
-![[informe-tecnico-20240622134625474.webp]]
+![](informe-tecnico-20240622134625474.webp)
 
 
 [Q&A with RAG | 🦜️🔗 Langchain](https://js.langchain.com/v0.1/docs/use_cases/question_answering/)

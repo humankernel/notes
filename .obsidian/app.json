@@ -36,5 +36,6 @@
   },
   "readableLineLength": false,
   "attachmentFolderPath": "_meta/img",
-  "livePreview": true
+  "livePreview": true,
+  "useMarkdownLinks": true
 }
