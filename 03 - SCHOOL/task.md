@@ -6,24 +6,40 @@ kanban-plugin: board
 
 ## 🗒️ backlog
 
-- [ ] isw - arreglar trabajo
-- [ ] coffee - automated tests
+- [ ] rag - survey
 
 
 ## 📒 todo
 
-- [ ] coffee - store + carrito
-- [ ] coffee - finish backend
-- [ ] coffee - auth + roles (frontend)
+- [ ] tests
+	- [ ] backend
+	- [ ] frontend
+	- [ ] validations
+- [ ] fix backend
+- [ ] auth
+	- [x] auth (login, register)
+	- [ ] RBAC
 
 
 ## 👷in progress
 
-- [ ] rag - survey
+- [ ] orders
+	- [ ] CRUD orders
+	- [ ] accept/reject (supplier)
 
 
 ## ✅ complete
 
+- [ ] reports
+	- [x] CRUD reports
+	- [x] sobrante/missing (almacenero)
+- [ ] qs
+	- [x] create c/s (customer)
+	- [x] update/delete c/s
+	- [x] update state c/s
+- [ ] products
+	- [x] CRUD products
+- [ ] coffee - login
 - [ ] io - pe @{2024-06-25}
 - [ ] isw - pe
 	
@@ -135,6 +151,6 @@ kanban-plugin: board
 
 %% kanban:settings
 ```
-{"kanban-plugin":"board","show-checkboxes":false,"show-relative-date":true,"hide-date-in-title":true,"date-picker-week-start":1,"hide-tags-display":true,"list-collapse":[false,false,false,true],"move-dates":true,"new-note-template":"_meta/templates/algo.md","move-tags":true}
+{"kanban-plugin":"board","show-checkboxes":false,"show-relative-date":true,"hide-date-in-title":true,"date-picker-week-start":1,"hide-tags-display":true,"list-collapse":[true,false,false,true],"move-dates":true,"new-note-template":"_meta/templates/algo.md","move-tags":true}
 ```
 %%

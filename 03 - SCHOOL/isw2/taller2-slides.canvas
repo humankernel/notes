@@ -23,18 +23,6 @@
       "label": "3"
     },
     {
-      "id": "58f77329ee00c04a",
-      "type": "group",
-      "sideRatio": 1.7777777777777777,
-      "isStartNode": true,
-      "x": -520,
-      "y": -420,
-      "width": 1200,
-      "height": 675,
-      "color": "4",
-      "label": "Start Slide"
-    },
-    {
       "id": "a7eca8b6ce0f563f",
       "type": "group",
       "sideRatio": 1.7777777777777777,
@@ -55,6 +43,18 @@
       "height": 696,
       "color": "6",
       "label": "3"
+    },
+    {
+      "id": "58f77329ee00c04a",
+      "type": "group",
+      "sideRatio": 1.7777777777777777,
+      "isStartNode": true,
+      "x": -520,
+      "y": -420,
+      "width": 1200,
+      "height": 675,
+      "color": "4",
+      "label": "Start Slide"
     },
     {
       "id": "699ec71ea5adfaf8",
@@ -121,6 +121,17 @@
       "label": "GRASP"
     },
     {
+      "id": "3c8cc4daf92b196c",
+      "type": "text",
+      "text": "# TALLER #2 - ISW2\n\n**Integrantes**:\n-> Naylin Brizuela Capote\n-> Juan Diego Sera\n-> Joaquin RIvas Sanchez\n-> Yoangel Savon Quintana\n-> Dialennis Hernandez",
+      "borderStyle": "dashed",
+      "x": -140,
+      "y": -240,
+      "width": 420,
+      "height": 246,
+      "color": "4"
+    },
+    {
       "id": "847f9a5af694669b",
       "type": "file",
       "file": "_meta/img/Pasted image 20240530211908.png",
@@ -146,6 +157,44 @@
       "y": -960,
       "width": 240,
       "height": 132
+    },
+    {
+      "id": "2ae66dad1de425f7",
+      "type": "file",
+      "file": "_meta/img/Pasted image 20240530215011.png",
+      "x": 920,
+      "y": -1225,
+      "width": 527,
+      "height": 350
+    },
+    {
+      "id": "c41a017aa5be8da3",
+      "type": "file",
+      "file": "_meta/img/Pasted image 20240530215131.png",
+      "x": 1520,
+      "y": -1300,
+      "width": 520,
+      "height": 426
+    },
+    {
+      "id": "ce46ef1b1dddc0f9",
+      "type": "text",
+      "text": "Gestionar Proveedor",
+      "borderStyle": "dashed",
+      "x": 1227,
+      "y": -1275,
+      "width": 220,
+      "height": 50
+    },
+    {
+      "id": "64b3940cdd283fcb",
+      "type": "text",
+      "text": "Administrar pedidos de mercancía",
+      "borderStyle": "dashed",
+      "x": 1520,
+      "y": -1350,
+      "width": 345,
+      "height": 50
     },
     {
       "id": "80da0d44cf0046cf",
@@ -175,15 +224,6 @@
       "height": 290
     },
     {
-      "id": "2ae66dad1de425f7",
-      "type": "file",
-      "file": "_meta/img/Pasted image 20240530215011.png",
-      "x": 920,
-      "y": -1225,
-      "width": 527,
-      "height": 350
-    },
-    {
       "id": "c41584e166ca00e0",
       "type": "text",
       "text": "**Controlador** (AuthController): \n\tse encarga de interpretar las peticiones HTTP y mediar entre la lógica de negocio y el frontend\n**Experto y Creador** (UserRepository): \n\timplementa la lógica relacionada a crear, actualizar, eliminar y buscar usuarios dado que es la experta en la información sobre los usuarios\n**Bajo acoplamiento & Alta Cohesión**\n\tno ha interacciones innecesarias entre estos componentes, y no están fuertemente atados entre sí gracias al uso de patrones de diseño como lo es la <u>Inyección de Dependencias</u>\n",
@@ -211,24 +251,6 @@
       "height": 364
     },
     {
-      "id": "c41a017aa5be8da3",
-      "type": "file",
-      "file": "_meta/img/Pasted image 20240530215131.png",
-      "x": 1520,
-      "y": -1300,
-      "width": 520,
-      "height": 426
-    },
-    {
-      "id": "0f443a0bb6351f57",
-      "type": "file",
-      "file": "_meta/img/Entity Relationship Diagram1 1.png",
-      "x": -800,
-      "y": -2520,
-      "width": 740,
-      "height": 587
-    },
-    {
       "id": "a6cd27ad96daef24",
       "type": "file",
       "file": "_meta/img/Pasted image 20240530220126.png",
@@ -238,24 +260,13 @@
       "height": 304
     },
     {
-      "id": "ce46ef1b1dddc0f9",
+      "id": "1c0660bf8775f1da",
       "type": "text",
-      "text": "Gestionar Proveedor",
-      "borderStyle": "dashed",
-      "x": 1227,
-      "y": -1275,
-      "width": 220,
-      "height": 50
-    },
-    {
-      "id": "64b3940cdd283fcb",
-      "type": "text",
-      "text": "Administrar pedidos de mercancía",
-      "borderStyle": "dashed",
-      "x": 1520,
-      "y": -1350,
-      "width": 345,
-      "height": 50
+      "text": "## Builder - (**Creacional**) \n\nPermite crear objetos complejos sin crear funciones creadoras para cada posible combinación",
+      "x": 2300,
+      "y": 1616,
+      "width": 412,
+      "height": 144
     },
     {
       "id": "738fe4937401b3eb",
@@ -267,15 +278,6 @@
       "height": 282
     },
     {
-      "id": "e2ec7f97d0612c88",
-      "type": "text",
-      "text": "# Modelo de Datos\n-> Yoangel",
-      "x": 0,
-      "y": -2500,
-      "width": 320,
-      "height": 120
-    },
-    {
       "id": "e76a56611cd11bb5",
       "type": "file",
       "file": "_meta/img/Pasted image 20240530212914.png",
@@ -283,15 +285,6 @@
       "y": 572,
       "width": 707,
       "height": 256
-    },
-    {
-      "id": "1c0660bf8775f1da",
-      "type": "text",
-      "text": "## Builder - (**Creacional**) \n\nPermite crear objetos complejos sin crear funciones creadoras para cada posible combinación",
-      "x": 2300,
-      "y": 1616,
-      "width": 412,
-      "height": 144
     },
     {
       "id": "9600202282811b42",
@@ -308,7 +301,7 @@
       "file": "_meta/img/Pasted image 20240530213924.png",
       "x": 2853,
       "y": 1620,
-      "width": 367,
+      "width": 365,
       "height": 107
     },
     {
@@ -319,6 +312,33 @@
       "y": 1802,
       "width": 486,
       "height": 304
+    },
+    {
+      "id": "157d470315edba4d",
+      "type": "text",
+      "text": "# Patrones de Diseño\n-> Joaquin",
+      "x": 540,
+      "y": 555,
+      "width": 300,
+      "height": 93
+    },
+    {
+      "id": "0f443a0bb6351f57",
+      "type": "file",
+      "file": "_meta/img/Entity Relationship Diagram1 1.png",
+      "x": -800,
+      "y": -2520,
+      "width": 740,
+      "height": 587
+    },
+    {
+      "id": "e2ec7f97d0612c88",
+      "type": "text",
+      "text": "# Modelo de Datos\n-> Yoangel",
+      "x": 0,
+      "y": -2500,
+      "width": 320,
+      "height": 120
     },
     {
       "id": "7b0a4cf250e03abc",
@@ -368,26 +388,6 @@
       "height": 50
     },
     {
-      "id": "3c8cc4daf92b196c",
-      "type": "text",
-      "text": "# TALLER #2 - ISW2\n\n**Integrantes**:\n-> Naylin Brizuela Capote\n-> Juan Diego Sera\n-> Joaquin RIvas Sanchez\n-> Yoangel Savon Quintana\n-> Dialennis Hernandez",
-      "borderStyle": "dashed",
-      "x": -140,
-      "y": -240,
-      "width": 420,
-      "height": 246,
-      "color": "4"
-    },
-    {
-      "id": "5d901224f67c9cf2",
-      "type": "text",
-      "text": "# Modelo Datos",
-      "x": -100,
-      "y": 146,
-      "width": 260,
-      "height": 60
-    },
-    {
       "id": "cc4157f6e86510e7",
       "type": "text",
       "text": "# Arquitectura ",
@@ -406,6 +406,15 @@
       "height": 100
     },
     {
+      "id": "5d901224f67c9cf2",
+      "type": "text",
+      "text": "# Modelo Datos",
+      "x": -100,
+      "y": 146,
+      "width": 260,
+      "height": 60
+    },
+    {
       "id": "c2e5ac95202f06c6",
       "type": "text",
       "text": "# Diagramas de Interacción",
@@ -422,15 +431,6 @@
       "y": -40,
       "width": 250,
       "height": 81
-    },
-    {
-      "id": "157d470315edba4d",
-      "type": "text",
-      "text": "# Patrones de Diseño\n-> Joaquin",
-      "x": 540,
-      "y": 555,
-      "width": 300,
-      "height": 93
     }
   ],
   "edges": [

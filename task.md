@@ -6,15 +6,9 @@ kanban-plugin: board
 
 ## 🗒️ backlog
 
-- [ ] setup - archlinux dots
-- [ ] homelab - plex
-	
-	torrent -> rename -> plex
-	
-	- plex
-	- serverr
-- [ ] design patterns
-- [ ] competitive programming
+- [ ] workflow
+	- [ ] linux setup
+	- [ ] obsidian sync
 - [ ] nvim
 	- [x] motions
 	- [x] neovim
@@ -22,39 +16,27 @@ kanban-plugin: board
 	- [ ] fix bugs
 	- [ ] debugging
 	- [ ] speed issues
-- [ ] git
-	- [ ] basics
-	- [ ] worktree ✅ 2024-06-21
-- [ ] - [ ] cv (latex)
-	- [ ] github page
-	- [ ] portfolio web
-- [ ] back-end projects
-	
-	- [ ] cli tool
-	- [ ] web server
-	- [ ] web app
-	- [ ] write a lang
-	- [ ] library
-- [ ] rust
-- [ ] clean napo's house
-- [ ] sell napo's house
-- [ ] buy x to napo
-
-
-## 📒 todo
-
-- [ ] ai - advanced rag
-- [ ] setup - obsidian sync
+- [ ] homelab
+- [ ] napo
+	- [ ] clean / sell house
+	- [ ] buy collar
 - [ ] ai - workflow
-	- lora
+	- comfy
 	- txt -> 3d
 	- txt -> audio
 	- audio -> txt
 	- pdf -> md
 
 
+## 📒 todo
+
+- [ ] rag
+
+
 ## 👷in progress
 
+- [ ] read ML book
+- [ ] read rust book
 
 
 ## ✅ complete

@@ -37,5 +37,6 @@
   "readableLineLength": false,
   "attachmentFolderPath": "_meta/img",
   "livePreview": true,
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "showRibbon": true
 }

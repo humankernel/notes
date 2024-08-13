@@ -1,7 +1,0 @@
-
-
-
-![[scanner-algo.excalidraw]]
-
-
-
