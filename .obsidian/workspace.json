@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 260
+    "width": 260,
+    "collapsed": true
   },
   "right": {
     "id": "4bd96c6804f52835",
@@ -147,15 +148,15 @@
   },
   "active": "debcc00997bdcfaf",
   "lastOpenFiles": [
+    "NAPO/napo.md",
+    "task.md",
     "NAPO/clinicas.md",
     "NAPO/historia.md",
-    "NAPO/napo.md",
     "NAPO/enfermedades/diabetes.md",
     "NAPO/enfermedades/insuficiencia-cardiaca.md",
     "NAPO/enfermedades/espondilosis-canina.md",
     "NAPO/enfermedades/cancer-linfoma.md",
     "NAPO/enfermedades/cancer-pulmon.md",
-    "task.md",
     "NAPO/tratamientos/quimioterapia.md",
     "NAPO/terminos/paliativos.md",
     "NAPO/medicinas/enrofloxacina.md",
