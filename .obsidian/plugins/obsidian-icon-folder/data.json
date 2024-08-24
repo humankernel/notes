@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FasDog",
       "FasGamepad",
       "FabLinux",
       "FasRobot",
-      "FasBook",
-      "🤖"
+      "FasBook"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -43,5 +43,6 @@
   "02 - AREAS/toolbox/docker": "FabDocker",
   "02 - AREAS/ai": "FasRobot",
   "02 - AREAS/gamedev": "FasGamepad",
-  "02 - AREAS/comp-arch": "FasComputer"
+  "02 - AREAS/comp-arch": "FasComputer",
+  "NAPO": "FasDog"
 }

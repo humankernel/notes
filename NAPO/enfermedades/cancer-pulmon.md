@@ -1,26 +1,29 @@
+# Cancer Pulmón
 
-## cáncer de pulmón primario perros
+
+
+## cáncer de pulmón primario
 
 [Tratamiento y síntomas del cáncer de pulmón en perros (k9-wellbeing.net)](http://www.k9-wellbeing.net/dog-lung-cancer.htm)
 
 - primarios normalmente son de **mediana edad o son viejos.** 
-- Aproximadamente, el 25 % de los perros y gatos con un tumor primario de pulmón **no tendrán ninguna señal**; 
-- estas mascotas posiblemente tengan tumores que **se descubren accidentalmente al hacer una radiografía de pecho** por otros motivos.
+- Aproximadamente, el 25 % de los perros y gatos con un tumor primario de pulmón **no tendrán ninguna señal**
 
 ![](napo-20240823190825134.webp)
 
 
-¿Condición física general? ¿Actitud mental? ¿Apetito? ¿Estado de los intestinos y del aparato urinario? La nariz de los perros sanos o cachorros es húmeda y fresca, pero en los perros enfermos suele estar caliente y seca. ¿Alopecia? ¿Piel seca? ¿Descargas? Es útil tener en cuenta estas observaciones generales al comprobar los síntomas del cáncer de pulmón en perros.
+El cáncer de pulmón primario son **tumores malignos** que se desarrollan originalmente en el tejido de los pulmones. 
+El tipo más común de tumor primario es el **carcinoma**. 
+Este tipo de cáncer produce tumores malignos que se desarrollan en los tejidos epiteliales de los pulmones. 
 
-
-## cáncer de pulmón primario
-El cáncer de pulmón primario son tumores malignos que se desarrollan originalmente en el tejido de los pulmones. El tipo más común de tumor primario es el carcinoma. Este tipo de cáncer produce tumores malignos que se desarrollan en los tejidos epiteliales de los pulmones. 
 
 El pronóstico es mejor para un animal que padece cáncer de pulmón primario, especialmente si se diagnostica temprano y el cáncer no ha tenido la oportunidad de diseminarse a otras partes del cuerpo.
 
 
 ## cáncer de pulmón metastásico
-El cáncer de pulmón metastásico comienza con un tumor en otra parte del cuerpo que viaja a los pulmones por el torrente sanguíneo. El cáncer de pulmón metastásico es la forma más común de cáncer de pulmón en perros y, desafortunadamente, los perros que son diagnosticados con esta forma secundaria de cáncer tienen menos posibilidades de recuperarse de esta enfermedad que los perros diagnosticados con cáncer de pulmón primario.
+
+El cáncer de pulmón metastásico comienza con un tumor en otra parte del cuerpo que viaja a los pulmones por el torrente sanguíneo. 
+El cáncer de pulmón metastásico es la **forma más común de cáncer de pulmón** en perros y, desafortunadamente, los perros que son diagnosticados con esta forma secundaria de cáncer tienen menos posibilidades de recuperarse de esta enfermedad que los perros diagnosticados con cáncer de pulmón primario.
 
 
 ## sintomas

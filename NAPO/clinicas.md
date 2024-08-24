@@ -1,8 +1,15 @@
+# Clínicas
+
+Clinica Sevillano (Vetpro) e/ Destrampe y Goicuria
+Clinica Huellas (calle 8 y final, reparto el especial Stgo de las Vegas, #42303) (76834554)
+- cirugias 
+- estudios
+- consultas
+
 
 ## directorio 
 
-segun [Clínicas veterinarias en Cuba | Trámites en Cuba (cubatramite.com)](https://www.cubatramite.com/clinicas-veterinarias-en-cuba/#:~:text=10%20de%20Octubre%201.%20Direcci%C3%B3n:)
-
+según [Clínicas veterinarias en Cuba | Trámites en Cuba (cubatramite.com)](https://www.cubatramite.com/clinicas-veterinarias-en-cuba/#:~:text=10%20de%20Octubre%201.%20Direcci%C3%B3n:)
 
 **10 de Octubre**
 

@@ -27,22 +27,8 @@
               },
               "pinned": true
             }
-          },
-          {
-            "id": "de2f6b3c551d9b6e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "NAPO/napo.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -84,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 260,
-    "collapsed": true
+    "width": 260
   },
   "right": {
     "id": "4bd96c6804f52835",
@@ -101,7 +86,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "NAPO/napo.md"
+                "file": "task.md"
               }
             }
           },
@@ -111,7 +96,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "NAPO/napo.md"
+                "file": "task.md"
               }
             }
           },
@@ -121,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "NAPO/napo.md",
+                "file": "task.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -160,30 +145,40 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "de2f6b3c551d9b6e",
+  "active": "debcc00997bdcfaf",
   "lastOpenFiles": [
-    "task.md",
-    "NAPO/napo.md",
-    "NAPO/cancer-pulmon.md",
-    "NAPO/tos.md",
-    "NAPO/insuficiencia-cardiaca.md",
-    "NAPO/espondilosis-canina.md",
     "NAPO/clinicas.md",
-    "Untitled.md",
-    "NAPO/cancer-linfoma.md",
+    "NAPO/historia.md",
+    "NAPO/napo.md",
+    "NAPO/enfermedades/diabetes.md",
+    "NAPO/enfermedades/insuficiencia-cardiaca.md",
+    "NAPO/enfermedades/espondilosis-canina.md",
+    "NAPO/enfermedades/cancer-linfoma.md",
+    "NAPO/enfermedades/cancer-pulmon.md",
+    "task.md",
+    "NAPO/tratamientos/quimioterapia.md",
     "NAPO/terminos/paliativos.md",
-    "NAPO/cancer-bone.md",
+    "NAPO/medicinas/enrofloxacina.md",
+    "NAPO/medicinas",
+    "_meta/img/Untitled-20240823231203712.webp",
+    "NAPO/enfermedades/bazo-agrandado.md",
+    "NAPO/enfermedades/tos.md",
+    "NAPO/tratamientos",
+    "NAPO/enfermedades",
+    "NAPO/historia",
+    "_meta/img/napo-20240823230240504.webp",
+    "_meta/img/napo-20240823230207829.webp",
+    "_meta/img/napo-20240823225607629.webp",
+    "_meta/img/bazo-20240823222812021.webp",
+    "Untitled.md",
+    "NAPO/enfermedades/cancer-bone.md",
     "NAPO/terminos",
-    "NAPO/quimioterapia.md",
     "_meta/img/quimioterapia-20240823201154687.webp",
     "_meta/img/quimioterapia-20240823201048546.webp",
     "_meta/img/cancer-linfoma-20240823193902000.webp",
     "_meta/img/cancer-linfoma-20240823193811915.webp",
     "_meta/img/cancer-linfoma-20240823193503172.webp",
-    "_meta/img/cancer-linfoma-20240823193015621.webp",
-    "NAPO/diabetes.md",
     "NAPO",
-    "_meta/img/napo-20240823190825134.webp",
     "02 - AREAS/comp-arch/os/memory/1.memory-manager.md",
     "02 - AREAS/comp-arch/os/memory/2.memory-managment-schema.md",
     "02 - AREAS/comp-arch/asm/0_assembly.md",
@@ -195,24 +190,13 @@
     "02 - AREAS/ssh.md",
     "02 - AREAS/db/no-sql/no-sql.md",
     "02 - AREAS/dsa/algorithm/sliding window.md",
-    "02 - AREAS/dsa/algorithm/two_pointer.md",
-    "02 - AREAS/dsa/algorithm/binary_search.md",
-    "02 - AREAS/dsa/datastructures/stack.md",
-    "02 - AREAS/dsa/datastructures/heap.md",
     "02 - AREAS/dsa/map.canvas",
     "02 - AREAS/git/git workflow.excalidraw",
     "Untitled.canvas",
     "03 - ARCHIVE/slides/isw2-taller2-slides.canvas",
     "02 - AREAS/math/calculus/calculus.canvas",
-    "_meta/img/Make It Stick.jpg",
-    "_meta/img/How to Take Smart Notes-20240816141014568.webp",
-    "_meta/img/The Design and Evolution of C++.jpg",
     "02 - AREAS/math/calculus/one-variable",
-    "02 - AREAS/books",
-    "02 - AREAS/setup/archlinux/pkgs",
     "02 - AREAS/setup/setup.canvas",
-    "02 - AREAS/toolbox",
-    "04 - SETUP/crazy_idea.excalidraw",
     "01 - PROJECTS/coffee/concept.canvas",
     "01 - PROJECTS/mux/ideas.canvas",
     "03 - SCHOOL/Untitled.canvas",
