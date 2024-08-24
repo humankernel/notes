@@ -1,5 +1,10 @@
+---
+tags:
+  - minimax
+  - adversal-search
+  - alpha-beta-pruning
+---
 # Minimax (Alpha-Beta Pruning)
-#minimax #adversal-search #alpha-beta-pruning
 
 related: [[minimax]]
 
@@ -10,7 +15,6 @@ related: [[minimax]]
 
 Minimax hace una búsqueda exhaustiva lo que en algunos casos limita la posibilidad de analizar mas niveles
 
-
 ## Intuition
 
 Se usaran 2 parámetros $[\alpha, \beta]$ que representa un segmento de soluciones
@@ -18,19 +22,6 @@ $\alpha$: representa el máximo hasta ahora
 $\beta$: representa el mínimo hasta ahora
 
 ![[alpha-beta.excalidraw|700]]
-
-
-## Approach
-
-
-## Complexity
-
-| operation | O |
-| :-:       | :-:    |
-| --      | $O(--)$  |
-
-
-## Code
 
 
 

@@ -8,6 +8,7 @@
   "compress": true,
   "decompressForMDView": false,
   "onceOffCompressFlagReset": true,
+  "onceOffGPTVersionReset": false,
   "autosave": true,
   "autosaveIntervalDesktop": 15000,
   "autosaveIntervalMobile": 10000,
@@ -91,7 +92,7 @@
   "library2": {
     "type": "excalidrawlib",
     "version": 2,
-    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.2.9",
+    "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.3.0",
     "libraryItems": [
       {
         "status": "published",
@@ -10833,7 +10834,8 @@
             "startBinding": {
               "elementId": "qidqHqnWMptPCLwzlTn-0",
               "focus": 0.15581553919730484,
-              "gap": 28.155612062460023
+              "gap": 28.155612062460023,
+              "fixedPoint": null
             },
             "endBinding": null,
             "lastCommittedPoint": null,
@@ -10923,12 +10925,14 @@
             "startBinding": {
               "elementId": "Yw4E5rPp4gWif-tEByQba",
               "focus": -0.13984457372237602,
-              "gap": 13.820481223189901
+              "gap": 13.820481223189901,
+              "fixedPoint": null
             },
             "endBinding": {
               "focus": -0.15033886230197094,
               "gap": 14.900714493729538,
-              "elementId": "qidqHqnWMptPCLwzlTn-0"
+              "elementId": "qidqHqnWMptPCLwzlTn-0",
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -11677,7 +11681,8 @@
             "endBinding": {
               "elementId": "VbtZxHn-CjxGWmdy2ZPxc",
               "focus": -0.014270121988154508,
-              "gap": 24.645087112188776
+              "gap": 24.645087112188776,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -11728,7 +11733,8 @@
             "endBinding": {
               "elementId": "Yw4E5rPp4gWif-tEByQba",
               "focus": 0.21061071595604922,
-              "gap": 14.287963676525337
+              "gap": 14.287963676525337,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -12927,12 +12933,14 @@
             "startBinding": {
               "elementId": "hlOUzFNNua0n_c_KRzOnU",
               "focus": 0.13115595930054022,
-              "gap": 23.712633189392363
+              "gap": 23.712633189392363,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "pffZFRBBrU2VJlC5-mWJL",
               "focus": -0.06331935896600947,
-              "gap": 9.651462040593742
+              "gap": 9.651462040593742,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": "triangle",
@@ -13206,7 +13214,8 @@
             "startBinding": {
               "elementId": "Boio5RLCdUsnwUKuZ9a5Z",
               "focus": 0.2295881220668586,
-              "gap": 1.0841504063087726
+              "gap": 1.0841504063087726,
+              "fixedPoint": null
             },
             "endBinding": null,
             "lastCommittedPoint": null,
@@ -13258,12 +13267,14 @@
             "startBinding": {
               "elementId": "Boio5RLCdUsnwUKuZ9a5Z",
               "focus": -0.05630840266145949,
-              "gap": 1
+              "gap": 1,
+              "fixedPoint": null
             },
             "endBinding": {
               "focus": 0.05904577717458523,
               "gap": 1,
-              "elementId": "z-j7uFSx_6LQocjGLVb-m"
+              "elementId": "z-j7uFSx_6LQocjGLVb-m",
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -13314,12 +13325,14 @@
             "startBinding": {
               "elementId": "Boio5RLCdUsnwUKuZ9a5Z",
               "focus": -0.06510629747560392,
-              "gap": 1
+              "gap": 1,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "bndpZAYZk4ZNNXJ7iVOS4",
               "focus": -0.12038536514805254,
-              "gap": 1
+              "gap": 1,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -13634,12 +13647,14 @@
             "startBinding": {
               "elementId": "pffZFRBBrU2VJlC5-mWJL",
               "focus": 0.29738380664088554,
-              "gap": 12.428205006308417
+              "gap": 12.428205006308417,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "4IVQdBa8MQ3rAaUMup1JL",
               "focus": 0.7215962687810902,
-              "gap": 16.993091634613847
+              "gap": 16.993091634613847,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -13689,12 +13704,14 @@
             "startBinding": {
               "elementId": "pffZFRBBrU2VJlC5-mWJL",
               "focus": 0.035582678775356216,
-              "gap": 12.34627083262194
+              "gap": 12.34627083262194,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "tPB4QiLNtC8aE2OeuI--Q",
               "focus": -3.3819314344701614,
-              "gap": 8.985067165106688
+              "gap": 8.985067165106688,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -14237,12 +14254,14 @@
             "startBinding": {
               "elementId": "pffZFRBBrU2VJlC5-mWJL",
               "focus": 0.026049132008104263,
-              "gap": 14.490546980319778
+              "gap": 14.490546980319778,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "ElYYWMoft8AppFhgMmAaw",
               "focus": -0.010098576586030906,
-              "gap": 14.224264364964256
+              "gap": 14.224264364964256,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -14292,12 +14311,14 @@
             "startBinding": {
               "focus": 0.34551830792122173,
               "gap": 30.100775717621218,
-              "elementId": "aIWluouESaTmRMNA8klu9"
+              "elementId": "aIWluouESaTmRMNA8klu9",
+              "fixedPoint": null
             },
             "endBinding": {
               "focus": 0.4125292401998037,
               "gap": 12.846517821345103,
-              "elementId": "0UJXoC14CD_cHsE50d-kv"
+              "elementId": "0UJXoC14CD_cHsE50d-kv",
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -14347,12 +14368,14 @@
             "startBinding": {
               "focus": -0.07119343950689225,
               "gap": 27.748800153201955,
-              "elementId": "aIWluouESaTmRMNA8klu9"
+              "elementId": "aIWluouESaTmRMNA8klu9",
+              "fixedPoint": null
             },
             "endBinding": {
               "focus": -0.6279364388311474,
               "gap": 11.560121592982505,
-              "elementId": "nNMTeW881WMC6K-JG223q"
+              "elementId": "nNMTeW881WMC6K-JG223q",
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -14402,12 +14425,14 @@
             "startBinding": {
               "elementId": "ElYYWMoft8AppFhgMmAaw",
               "focus": 0.01502807469018355,
-              "gap": 9.202182163075122
+              "gap": 9.202182163075122,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "aIWluouESaTmRMNA8klu9",
               "focus": -0.1337427924321891,
-              "gap": 15.550320700414886
+              "gap": 15.550320700414886,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -16127,7 +16152,8 @@
             "endBinding": {
               "focus": -0.30546335664496105,
               "gap": 30.217396651503805,
-              "elementId": "LGkRWuPMF8ufIHaQsYzTG"
+              "elementId": "LGkRWuPMF8ufIHaQsYzTG",
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -16178,7 +16204,8 @@
             "endBinding": {
               "elementId": "LGkRWuPMF8ufIHaQsYzTG",
               "focus": -0.25120531072511915,
-              "gap": 28.667579304786955
+              "gap": 28.667579304786955,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -16229,7 +16256,8 @@
             "endBinding": {
               "elementId": "LGkRWuPMF8ufIHaQsYzTG",
               "focus": -0.07990712195076871,
-              "gap": 30.179783985863423
+              "gap": 30.179783985863423,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -16280,7 +16308,8 @@
             "endBinding": {
               "focus": 0.31280362845902543,
               "gap": 27.049669194525904,
-              "elementId": "LGkRWuPMF8ufIHaQsYzTG"
+              "elementId": "LGkRWuPMF8ufIHaQsYzTG",
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -16471,7 +16500,8 @@
             "endBinding": {
               "elementId": "FFOD0XGLtB5OmX4dvPBtY",
               "focus": -0.05243152186072274,
-              "gap": 6.806224785629183
+              "gap": 6.806224785629183,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": "triangle",
@@ -16741,7 +16771,8 @@
             "startBinding": {
               "elementId": "FXNTcnWLijkoHq4DCkX9Z",
               "focus": 0.22958812206685228,
-              "gap": 1.0841504063085798
+              "gap": 1.0841504063085798,
+              "fixedPoint": null
             },
             "endBinding": null,
             "lastCommittedPoint": null,
@@ -16793,12 +16824,14 @@
             "startBinding": {
               "elementId": "FXNTcnWLijkoHq4DCkX9Z",
               "focus": -0.056308402661453955,
-              "gap": 1
+              "gap": 1,
+              "fixedPoint": null
             },
             "endBinding": {
               "focus": 0.05904577717458523,
               "gap": 1,
-              "elementId": "Cf3_5JbvbTgijrpysKF-r"
+              "elementId": "Cf3_5JbvbTgijrpysKF-r",
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -16849,12 +16882,14 @@
             "startBinding": {
               "elementId": "FXNTcnWLijkoHq4DCkX9Z",
               "focus": -0.06510629747561641,
-              "gap": 1
+              "gap": 1,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "vJLptisn1wbZfeYYYxCdJ",
               "focus": -0.12038536514806888,
-              "gap": 1
+              "gap": 1,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -16992,12 +17027,14 @@
             "startBinding": {
               "elementId": "FFOD0XGLtB5OmX4dvPBtY",
               "gap": 16.31994278586842,
-              "focus": 0.02584226107067943
+              "focus": 0.02584226107067943,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "uIZpQD_FGxkOgECue45wj",
               "gap": 19.55124268633415,
-              "focus": 0.007244127832075515
+              "focus": 0.007244127832075515,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -17207,12 +17244,14 @@
             "startBinding": {
               "elementId": "uIZpQD_FGxkOgECue45wj",
               "focus": 0.028180600394508214,
-              "gap": 14.406869350447778
+              "gap": 14.406869350447778,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "W7VKtAL3xWizSmGSTacsK",
               "focus": -0.17104003487912003,
-              "gap": 8.5327909761603
+              "gap": 8.5327909761603,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -17389,12 +17428,14 @@
             "startBinding": {
               "elementId": "FFOD0XGLtB5OmX4dvPBtY",
               "focus": -0.5424650886087377,
-              "gap": 8.501369531134742
+              "gap": 8.501369531134742,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "Nc_9bv-Af3tyWHMzXI35P",
               "focus": -0.006102026124500789,
-              "gap": 5.472163920054527
+              "gap": 5.472163920054527,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -19062,12 +19103,14 @@
             "startBinding": {
               "elementId": "FNSziaBNlQyc6jMbSEWxi",
               "focus": 0.21520695862122796,
-              "gap": 27.643827417718967
+              "gap": 27.643827417718967,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "LVLb5p2ivlIk3YzipBAdk",
               "focus": -0.06323827841671242,
-              "gap": 12.064769343590797
+              "gap": 12.064769343590797,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": "triangle",
@@ -19333,7 +19376,8 @@
             "startBinding": {
               "elementId": "6m_LYAQRKr9PhliWEVflP",
               "focus": 0.22958812206677065,
-              "gap": 1.0841504063088578
+              "gap": 1.0841504063088578,
+              "fixedPoint": null
             },
             "endBinding": null,
             "lastCommittedPoint": null,
@@ -19385,12 +19429,14 @@
             "startBinding": {
               "elementId": "6m_LYAQRKr9PhliWEVflP",
               "focus": -0.0563084026614644,
-              "gap": 1
+              "gap": 1,
+              "fixedPoint": null
             },
             "endBinding": {
               "focus": 0.05904577717458523,
               "gap": 1,
-              "elementId": "JxBUdIzToP8FxKmmF1nnv"
+              "elementId": "JxBUdIzToP8FxKmmF1nnv",
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -19441,12 +19487,14 @@
             "startBinding": {
               "elementId": "6m_LYAQRKr9PhliWEVflP",
               "focus": -0.06510629747553413,
-              "gap": 1
+              "gap": 1,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "rT5692pALwSN7wcUVjIHA",
               "focus": -0.12038536514813254,
-              "gap": 1
+              "gap": 1,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -22327,12 +22375,14 @@
             "startBinding": {
               "elementId": "e6_4qw0k6ZO8hbpH-KRmd",
               "focus": -0.32803771693139033,
-              "gap": 12.754718933587469
+              "gap": 12.754718933587469,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "c8WjNwKUaslKSg-N-rNJ4",
               "focus": 0.7326144602563912,
-              "gap": 12.65997002566175
+              "gap": 12.65997002566175,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -22386,12 +22436,14 @@
             "startBinding": {
               "elementId": "P7W_lCMx6UrdVeWVX6mPg",
               "focus": 0.0753749240809205,
-              "gap": 12.625836147389691
+              "gap": 12.625836147389691,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "fmub8DESDL1ElC6aZyeMK",
               "focus": -0.019628020771769186,
-              "gap": 12.59469488092348
+              "gap": 12.59469488092348,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -22441,12 +22493,14 @@
             "startBinding": {
               "elementId": "LVLb5p2ivlIk3YzipBAdk",
               "focus": 0.057008310501598596,
-              "gap": 9.987963208137671
+              "gap": 9.987963208137671,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "e6_4qw0k6ZO8hbpH-KRmd",
               "focus": -0.02244110232059578,
-              "gap": 9.950540929998965
+              "gap": 9.950540929998965,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": "triangle",
@@ -22504,12 +22558,14 @@
             "startBinding": {
               "elementId": "SPZpuzq22sXmT2pe86AWf",
               "focus": 0.08126978040641095,
-              "gap": 22.68047356215061
+              "gap": 22.68047356215061,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "v_0eTHNLiJjmL_icR30tI",
               "focus": -0.06331935896601003,
-              "gap": 9.651462040591923
+              "gap": 9.651462040591923,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": "triangle",
@@ -22781,7 +22837,8 @@
             "startBinding": {
               "elementId": "sZOcNJG_XPL1V_YITs9GV",
               "focus": 0.22958812206677157,
-              "gap": 1.0841504063088578
+              "gap": 1.0841504063088578,
+              "fixedPoint": null
             },
             "endBinding": null,
             "lastCommittedPoint": null,
@@ -22834,12 +22891,14 @@
             "startBinding": {
               "elementId": "sZOcNJG_XPL1V_YITs9GV",
               "focus": -0.0563084026614644,
-              "gap": 1
+              "gap": 1,
+              "fixedPoint": null
             },
             "endBinding": {
               "focus": 0.05904577717458523,
               "gap": 1,
-              "elementId": "enVuIP6hXpOhycXg4laHR"
+              "elementId": "enVuIP6hXpOhycXg4laHR",
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -22891,12 +22950,14 @@
             "startBinding": {
               "elementId": "sZOcNJG_XPL1V_YITs9GV",
               "focus": -0.06510629747553526,
-              "gap": 1
+              "gap": 1,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "XHgnwl2tnTMvakZIrTodK",
               "focus": -0.12038536514813808,
-              "gap": 1
+              "gap": 1,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -23209,12 +23270,14 @@
             "startBinding": {
               "elementId": "v_0eTHNLiJjmL_icR30tI",
               "focus": 0.10546240080221575,
-              "gap": 10.908913088840563
+              "gap": 10.908913088840563,
+              "fixedPoint": null
             },
             "endBinding": {
               "elementId": "g5l7-E7ayIYTYpOOud9Ki",
               "focus": -0.012602056940369557,
-              "gap": 17.496530907093984
+              "gap": 17.496530907093984,
+              "fixedPoint": null
             },
             "lastCommittedPoint": null,
             "startArrowhead": null,
@@ -23745,7 +23808,7 @@
   "mdCSS": "",
   "scriptEngineSettings": {},
   "defaultTrayMode": true,
-  "previousRelease": "2.2.9",
+  "previousRelease": "2.3.0",
   "showReleaseNotes": true,
   "showNewVersionNotification": true,
   "latexBoilerplate": "",
@@ -24094,7 +24157,7 @@
   "startupScriptPath": "",
   "openAIAPIToken": "",
   "openAIDefaultTextModel": "gpt-3.5-turbo-1106",
-  "openAIDefaultVisionModel": "gpt-4-vision-preview",
+  "openAIDefaultVisionModel": "gpt-4o",
   "openAIDefaultImageGenerationModel": "dall-e-3",
   "openAIURL": "https://api.openai.com/v1/chat/completions",
   "openAIImageGenerationURL": "https://api.openai.com/v1/images/generations",
@@ -24389,5 +24452,6 @@
   "longPressDesktop": 500,
   "longPressMobile": 500,
   "isDebugMode": false,
+  "rank": "Bronze",
   "autosaveInterval": 15000
 }

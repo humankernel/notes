@@ -70,10 +70,7 @@ O bien, puede ser un conjunto de filas entre dos límites.
 BETWEEN
 { UNBOUNDED PRECEDING | offset { PRECEDING | FOLLOWING } | CURRENT ROW }
 AND
-{ UNBOUNDED FOLLOWING | offset { PRECEDING | FOLLOWING } | CURRENT ROW }
-
-|  |
-| ---- |
+{ UNBOUNDED FOLLOWING | offset { PRECEDING | FOLLOWING } | CURRENT ROW |
 $$\text{frame start} < \text{frame end}$$
 
 

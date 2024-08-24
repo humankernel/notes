@@ -1,4 +1,4 @@
-## Sucesion
+## Succession
 
 *Una sucesión se puede pensar como una lista de números escritos en un orden definido*:
 $$a1, a2, a3, a4, ..., an, . . .$$
@@ -189,7 +189,7 @@ $$
 
 
 
-## Series Numericas
+## Series Numéricas
 
 Si tratamos de sumar los términos de una sucesión infinita $\{a_n\}_{n=1}^\infty$ , obtenemos una expresión de la forma
 $$a_1 + a_2 + a_3 + ... + a_n + ...$$
@@ -438,7 +438,7 @@ $$\frac{1}{2^n + 1} \le \frac{1}{2^n}$$
 
 
 
-## Ejercicios CP
+## Ejercicios
 
 > [!INFO]- $\sum \frac{1}{\sqrt{n\sqrt{n+1}}}$
 > 
@@ -505,7 +505,6 @@ $$\frac{1}{2^n + 1} \le \frac{1}{2^n}$$
 > = \lim_{n \to \infty} \frac{n^3}{n^3 -3n +3} = 1 
 > $$
 > Entonces es **CONVERGENTE**> 
-
 
 > [!INFO]- $\sum \frac{n^3}{2n^4 +3n -1}$
 > 1. CN

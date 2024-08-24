@@ -1,3 +1,14 @@
+---
+tags:
+  - relational
+  - sql
+  - normalization
+  - 1fn
+  - 2fn
+  - 3fn
+---
+# Normalization
+
 **Ventajas**
 - Evita anomalias de actualizacion
 - Mejora la independencia de los datos, permitiendo realizar extensiones a la BD

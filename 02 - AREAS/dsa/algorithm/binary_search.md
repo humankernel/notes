@@ -44,8 +44,6 @@ Does this loop ever stop? Yes, take the following picture as an example, suppose
 #### Implementation
 
 ```c++
-class Solution {
-public:
     int search(vector<int>& nums, int target) {
         // Set the left and right boundaries
         int left = 0, right = int(nums.size()) - 1;
@@ -72,7 +70,6 @@ public:
         // If we finish the search without finding target, return -1.
         return -1;
     }
-};
 ```
 
 #### Complexity Analysis

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4b2d94f54b7e4f1c",
+        "id": "11d70e909be002fd",
         "type": "tabs",
         "children": [
           {
-            "id": "6ebaf8dbb7e31a91",
+            "id": "debcc00997bdcfaf",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -29,12 +29,12 @@
             }
           },
           {
-            "id": "85138bbad44fd553",
+            "id": "de2f6b3c551d9b6e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 - AREAS/challenges.md",
+                "file": "NAPO/napo.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -84,7 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 260,
     "collapsed": true
   },
   "right": {
@@ -101,7 +101,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "02 - AREAS/challenges.md"
+                "file": "NAPO/napo.md"
               }
             }
           },
@@ -111,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 - AREAS/challenges.md"
+                "file": "NAPO/napo.md"
               }
             }
           },
@@ -121,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02 - AREAS/challenges.md",
+                "file": "NAPO/napo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,66 +153,69 @@
       "canvas:Create new canvas": false,
       "templates:Insert template": true,
       "command-palette:Open command palette": true,
+      "obsidian-kanban:Create new board": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-kanban:Create new board": false
+      "obsidian-book-search-plugin:Create new book note": false,
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "85138bbad44fd553",
+  "active": "de2f6b3c551d9b6e",
   "lastOpenFiles": [
-    "02 - AREAS/books.md",
-    "02 - AREAS/challenges.md",
     "task.md",
-    "02 - AREAS/rust/guide.md",
-    "02 - AREAS/ssh.md",
-    "Untitled Kanban.md",
-    "Untitled.canvas",
+    "NAPO/cancer-pulmon.md",
+    "NAPO/tos.md",
+    "NAPO/napo.md",
+    "NAPO/insuficiencia-cardiaca.md",
+    "NAPO/espondilosis-canina.md",
+    "NAPO/clinicas.md",
+    "Untitled.md",
+    "NAPO/cancer-linfoma.md",
+    "NAPO/terminos/paliativos.md",
+    "NAPO/cancer-bone.md",
+    "NAPO/terminos",
+    "NAPO/quimioterapia.md",
+    "_meta/img/quimioterapia-20240823201154687.webp",
+    "_meta/img/quimioterapia-20240823201048546.webp",
+    "_meta/img/cancer-linfoma-20240823193902000.webp",
+    "_meta/img/cancer-linfoma-20240823193811915.webp",
+    "_meta/img/cancer-linfoma-20240823193503172.webp",
+    "_meta/img/cancer-linfoma-20240823193015621.webp",
+    "NAPO/diabetes.md",
+    "NAPO",
+    "_meta/img/napo-20240823190825134.webp",
+    "02 - AREAS/comp-arch/os/memory/1.memory-manager.md",
+    "02 - AREAS/comp-arch/os/memory/2.memory-managment-schema.md",
+    "02 - AREAS/comp-arch/asm/0_assembly.md",
     "01 - PROJECTS/game.md",
-    "2024-08-07.md",
-    "02 - AREAS/git/ssh.md",
-    "02 - AREAS/db/sql/optimization/index.md",
-    "01 - PROJECTS/rag/draft.md",
-    "01 - PROJECTS/rag/tips.md",
-    "02 - AREAS/toolbox/archlinux/setup.md",
-    "02 - AREAS/setup/archlinux/pkgs/core.md",
-    "02 - AREAS/setup/archlinux/0.install.md",
-    "02 - AREAS/setup/archlinux/dotfiles.md",
-    "02 - AREAS/setup/archlinux/pkgs/hypr.md",
-    "hyprland.md",
-    "02 - AREAS/setup/archlinux/pkgs/extra.md",
+    "home.md",
+    "02 - AREAS/books/Competitive Programming 4 - Book 2.md",
+    "02 - AREAS/gamedev",
+    "03 - ARCHIVE",
+    "02 - AREAS/ssh.md",
+    "02 - AREAS/db/no-sql/no-sql.md",
+    "02 - AREAS/dsa/algorithm/sliding window.md",
+    "02 - AREAS/dsa/algorithm/two_pointer.md",
+    "02 - AREAS/dsa/algorithm/binary_search.md",
+    "02 - AREAS/dsa/datastructures/stack.md",
+    "02 - AREAS/dsa/datastructures/heap.md",
+    "02 - AREAS/dsa/map.canvas",
+    "02 - AREAS/git/git workflow.excalidraw",
+    "Untitled.canvas",
+    "03 - ARCHIVE/slides/isw2-taller2-slides.canvas",
+    "02 - AREAS/math/calculus/calculus.canvas",
+    "_meta/img/Make It Stick.jpg",
+    "_meta/img/How to Take Smart Notes-20240816141014568.webp",
+    "_meta/img/The Design and Evolution of C++.jpg",
+    "02 - AREAS/math/calculus/one-variable",
+    "02 - AREAS/books",
     "02 - AREAS/setup/archlinux/pkgs",
-    "02 - AREAS/setup/apps.md",
-    "02 - AREAS/setup/archlinux/de/hyprland.md",
-    "02 - AREAS/setup/archlinux/2.maintenance.md",
-    "02 - AREAS/setup/archlinux/1.postinstall.md",
-    "02 - AREAS/setup/archlinux/3.perf.md",
-    "02 - AREAS/setup/archlinux/troubleshooting.md",
-    "02 - AREAS/setup/archlinux/4.aur.md",
     "02 - AREAS/setup/setup.canvas",
     "02 - AREAS/toolbox",
     "04 - SETUP/crazy_idea.excalidraw",
-    "02 - AREAS/rust",
-    "03 - SCHOOL/isw2/taller2-slides.canvas",
     "01 - PROJECTS/coffee/concept.canvas",
-    "_meta/img/01 How it works.svg",
-    "_meta/img/informe-tecnico-20240622134621309.webp",
-    "_meta/img/tips-20240629104317522.webp",
     "01 - PROJECTS/mux/ideas.canvas",
-    "02 - AREAS/webdev/next/next-auth-canvas.excalidraw",
-    "02 - AREAS/dsa/map.canvas",
-    "02 - AREAS/math/calculus.canvas",
-    "_meta/img/tips-20240629101923427.webp",
-    "_meta/img/tips-20240629101825726.webp",
-    "_meta/img/tips-20240629101434082.webp",
-    "_meta/img/tips-20240629101351848.webp",
-    "_meta/img/tips-20240629101331592.webp",
-    "_meta/img/informe-tecnico-20240622134625474.webp",
-    "01 - PROJECTS/rag",
-    "_meta/img/8.min-cost-flow-20240619220924311.webp",
-    "02 - AREAS/ai/prolog",
-    "02 - AREAS/ai/knowledge-based-sys",
-    "02 - AREAS/ai/search",
     "03 - SCHOOL/Untitled.canvas",
-    "03 - SCHOOL/fs",
     "setup/idea.canvas",
     "ideas.canvas"
   ]

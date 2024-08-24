@@ -1,0 +1,19 @@
+{
+  "folder": "02 - AREAS/books",
+  "fileNameFormat": "{{title}}",
+  "frontmatter": "",
+  "content": "",
+  "useDefaultFrontmatter": true,
+  "defaultFrontmatterKeyType": "Camel Case",
+  "templateFile": "_meta/templates/book.md",
+  "serviceProvider": "google",
+  "naverClientId": "",
+  "naverClientSecret": "",
+  "localePreference": "default",
+  "apiKey": "",
+  "openPageOnCompletion": true,
+  "showCoverImageInSearch": true,
+  "enableCoverImageSave": true,
+  "coverImagePath": "_meta/img",
+  "askForLocale": true
+}

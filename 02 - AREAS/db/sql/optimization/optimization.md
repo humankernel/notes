@@ -31,4 +31,4 @@
 - [[explain]]
 - [[fav]]
 - [[with]]
-- [[index]]
+- [[02 - AREAS/db/sql/optimization/index]]

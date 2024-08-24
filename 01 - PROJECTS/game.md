@@ -6,6 +6,7 @@ ej:
 - biología
 - física
 
+
 Primera persona porque tiene que estar enfocado en el problem solving como una mecánica principal que aporta variación y al desarrollo del personaje principal
 
 Personajes:

@@ -1,15 +1,7 @@
-
 # DDL (Data Definition Language) 
 
 ## CREATE
 
-```sql
-CREATE [object_type] [object_name] [object_definition] 
-```
-
-- **object_type**: DATABASE | TABLE
-- **object_name**: 
-- **object_definition**: (col data_type contraints, col2 data_type contraints)
 
 ```sql
 CREATE TABLE table1 (
@@ -32,7 +24,7 @@ CREATE TABLE product (
 ```
 
 **constrains**:
-- domain restrinctions
+- domain restrictions
 - validations
 - allow nulls or not
 - default values

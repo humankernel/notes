@@ -1,6 +1,5 @@
 
 
-
 ## [[Problem]]: Permutation in string (same as anagram in string)
 
 [Permutation in String - LeetCode](https://leetcode.com/problems/permutation-in-string/?envType=study-plan&id=algorithm-i)
@@ -56,3 +55,12 @@ bool checkInclusion(string s1, string s2) {
     return false;
 }
 ```
+
+
+
+Python
+```py
+print ("sdfsf")
+```
+
+

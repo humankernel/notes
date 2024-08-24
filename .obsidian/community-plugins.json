@@ -3,8 +3,9 @@
   "obsidian-icon-folder",
   "obsidian-kanban",
   "image-converter",
-  "obsidian-linter",
-  "dataview",
   "obsidian-git",
-  "obsidian-style-settings"
+  "obsidian-book-search-plugin",
+  "oz-clear-unused-images",
+  "code-emitter",
+  "obsidian-advanced-slides"
 ]

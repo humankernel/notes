@@ -9,17 +9,6 @@ kanban-plugin: board
 - [ ] workflow
 	- [ ] linux setup
 	- [ ] obsidian sync
-- [ ] nvim
-	- [x] motions
-	- [x] neovim
-	- [x] git workflow
-	- [ ] fix bugs
-	- [ ] debugging
-	- [ ] speed issues
-- [ ] homelab
-- [ ] napo
-	- [ ] clean / sell house
-	- [ ] buy collar
 - [ ] ai - workflow
 	- comfy
 	- txt -> 3d
@@ -30,17 +19,29 @@ kanban-plugin: board
 
 ## 📒 todo
 
-- [ ] rag
+- [ ] nvim
+	- [x] motions
+	- [x] git workflow
+	- [ ] fix bugs
+	- [ ] debugging
+	- [ ] speed issues
 
 
 ## 👷in progress
 
+- [ ] rag
+	
+	- [ ] change to llama3.1
+	- [ ] use marker
+	- [ ] evaluate
 - [ ] read ML book
 - [ ] read rust book
 
 
 ## ✅ complete
 
+- [ ] homelab
+	- [x] plex
 
 
 ***

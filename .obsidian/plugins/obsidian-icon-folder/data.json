@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "FabRust",
-      "🦇",
-      "FasBrain",
-      "FabWindows",
-      "FabLinux"
+      "FasGamepad",
+      "FabLinux",
+      "FasRobot",
+      "FasBook",
+      "🤖"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -30,16 +30,18 @@
     "debugMode": false,
     "iconInFrontmatterFieldName": "icon",
     "iconColorInFrontmatterFieldName": "iconColor",
-    "iconInTitlePosition": "above"
+    "iconInTitlePosition": "above",
+    "lucideIconPackType": "native"
   },
   "02 - AREAS/dsa": "FasTree",
   "02 - AREAS/db": "FasDatabase",
   "02 - AREAS/git": "FabGitAlt",
-  "02 - AREAS/low-level": "FasComputer",
   "02 - AREAS/math": "FasCalculator",
-  "02 - AREAS/ai": "FasRobot",
   "02 - AREAS/rust": "FabRust",
   "02 - AREAS/toolbox": "FabLinux",
   "02 - AREAS/toolbox/archlinux": "FabLinux",
-  "02 - AREAS/toolbox/docker": "FabDocker"
+  "02 - AREAS/toolbox/docker": "FabDocker",
+  "02 - AREAS/ai": "FasRobot",
+  "02 - AREAS/gamedev": "FasGamepad",
+  "02 - AREAS/comp-arch": "FasComputer"
 }

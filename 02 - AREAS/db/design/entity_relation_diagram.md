@@ -1,5 +1,4 @@
 
-
 ## DER
 
 - Un **campo o atributo** es la unidad menor de informacion sobre un objeto
